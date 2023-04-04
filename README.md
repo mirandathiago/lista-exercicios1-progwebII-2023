@@ -11,3 +11,5 @@ Esta lista tem 33 questões divididas em 4 partes. No total você deve escolher 
 - Forma de apresentação: Abrir o código desenvolvido e explicar o que e como foi feito de forma clara e objetiva. Em seguida deverá demonstrar o funcionamento. O Professor poderá questionar a qualquer momento da explicação.
 
 ### Data da Entrega: 1 de Maio até 23h59 através do Google Classroom
+
+[https://docs.google.com/document/d/1bpB1Jd8Ea5S4kEzgjhSN1pRp50ve-p1s3zNvwhhk97U/edit?usp=sharing]
