@@ -10,7 +10,7 @@ $desconto=$preco-($preco*0.1);
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="../../estilo.css">
     <title>Questão 1</title>
 </head>
 <body>
