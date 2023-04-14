@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +19,7 @@
 					<input type="number" name="valor" min = "0" required>
 				</label>
 				<label>Parcelas:
-					<input type="number" name="parcelas" max = "12" required>
+					<input type="number" name="parcelas" min="0" max = "12" required>
 				</label>
 				<button name="enviar"> Enviar </button>
 			</form>
