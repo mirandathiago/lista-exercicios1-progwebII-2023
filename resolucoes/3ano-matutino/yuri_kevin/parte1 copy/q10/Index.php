@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Questão 8 Parte 1</title>
+	<title>Questão 10 Parte 1</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="estilo.css" rel="stylesheet">
 </head>
 <body>
 	<div class="container">
-    <h1>Valor Celular</h1>
-		<form action = "r_P1_Q8.php" method = "post">
-			<label>Valor Celular:
-			  <input type="number" name="valor" min="1" required>
-      </label>
-	  <label>Parcelas:
-			  <input type="number" name="meses" min="0" max="12" required>
-      </label>
+		<div class="box formulario">
+    	<h1>Calcular Juros Compsotos</h1>
+		<form action = "r_p1_q10.php" method = "post">
+			<label>Valor Empréstimo:
+			  <input type="number" name="valor" min="100" required>
+      		</label>
+	  		<label>Quantidade de Meses:
+			  <input type="number" name="meses" min="1" required>
+      		</label>
 			<button>Enviar</button>
 		</form>
+		</div>
 	</div>
 </body>
 </html>
