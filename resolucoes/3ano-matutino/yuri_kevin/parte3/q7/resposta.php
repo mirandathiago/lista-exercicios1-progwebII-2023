@@ -80,8 +80,7 @@
 
 						break;
 
-						default:
-						echo "erro";
+						
 					}
 					
 				?>
