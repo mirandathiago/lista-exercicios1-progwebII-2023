@@ -37,7 +37,7 @@
 </head>
 <body>
 	<header>
-		<h1>Valor Celular</h1>
+		<h1>Impar ou Par</h1>
 	</header>
 	<div class="container">
 		<div class="box resposta">
