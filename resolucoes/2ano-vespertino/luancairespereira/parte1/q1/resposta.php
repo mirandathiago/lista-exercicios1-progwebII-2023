@@ -20,7 +20,7 @@
 		<div class="box resposta">
 			<h2>Preços finais</h2>
 			<p>o Valor de entrada R$<?php $preco?> com o desconto de <?php $desconto?> ficará no valor de <?php $precofinal?>.</p>
-            <a href="" class="link">Voltar</a>
+            <a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
