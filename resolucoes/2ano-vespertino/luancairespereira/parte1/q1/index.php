@@ -10,7 +10,8 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de cálculo de desconto de 10%</h1>
+		<h2>Formulário de cálculo de descontos</h1>
+		<!-- criei o form utilizando o método post e enviando  o preço informado para o php-->
 	</header>
 	<div class="container">
 		<div class="box formulario">
