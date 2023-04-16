@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<!--Pedro precisa calcular o preço de um produto com um desconto de 10%. Crie um formulário que receba o preço original do produto e calcule o preço final com o desconto aplicado.
+-->
 <html>
 <head>
 	<meta charset="UTF-8">

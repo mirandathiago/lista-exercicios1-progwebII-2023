@@ -1,4 +1,5 @@
 <?php
+//criei o bloco php e informei as variáveis recuperando o valor de entrada e informando o valor fixo do descconto de 10% e multipliquei pelo preço de entrada para ter o valor final
 	$preco = $_POST["preco"]??0;
 	$desconto = 0.01;
 	$precofinal = $preco * $desconto;
@@ -19,7 +20,8 @@
 	<div class="container">
 		<div class="box resposta">
 			<h2>Preços finais</h2>
-			<p>o Valor de entrada R$<?php $preco?> com o desconto de <?php $desconto?> ficará no valor de <?php $precofinal?>.</p>
+			<!-- aq eu criei um bloco php dentro do bloco html para imprimir as respostas dos cálculos realizados no bloco php anterior-->
+			<?php echo"<p>O valor de {$preco} aplicado ao desconto de {$desconto} foi reajustado para {$precofinal. </p>"?>
             <a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
