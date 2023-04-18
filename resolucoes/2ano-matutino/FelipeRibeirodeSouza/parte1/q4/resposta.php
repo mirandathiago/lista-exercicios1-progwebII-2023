@@ -1,3 +1,12 @@
+<?php
+	$distancia = $_POST["distancia"] ?? 1;
+	$consumo = $_POST["consumo"] ?? 1;
+
+	$combustivelnecessario = $distancia / $consumo;
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,12 +21,11 @@
 	</header>
 	<div class="container">
 		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<h2>Quantidade de combustível</h2>
+			<p>A quantidade de combustível para percorrer <?=$distancia?>Km é</p>
+			<p class="alerta-vermelho"><?=$combustivelnecessario?> litro(s)</p>
+			
+            <a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>

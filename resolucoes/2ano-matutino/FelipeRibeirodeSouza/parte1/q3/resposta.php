@@ -24,7 +24,7 @@
 		<div class="box resposta">
 			<h2>Média Final</h2>
 			<?php
-				if($media>6){
+				if($media>=6){
 					echo "<p class='alerta-verde'>A média do aluno foi {$media}</p>";
 					echo "<h1 class='alerta-verde'>Aluno aprovado!</h1>";
 				}else{
