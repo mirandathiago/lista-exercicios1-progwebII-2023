@@ -17,7 +17,7 @@
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Digite qual o número limite da sequência de somas:</h2>
+			<h2>Digite qual o número limite da sequência de soma:</h2>
 			<form action="index.php" method="post">
 				<label>Número(N):
 					<input type="number" id="numero" name="numero" required>
@@ -39,6 +39,8 @@
 				echo"<p class='alerta-amarelo'>{$soma}</p>";
 			}
 		?>
+
+				<a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
