@@ -29,15 +29,15 @@
 			<h2>Entre em contato</h2>
 			<form action="index.php" method="post">
 				<label>Informe o valor A da equação:
-					<input type="number" id="numero" name="nA" required step="0.1" value="1">
+					<input type="number" id="numero" name="nA" required step="0.1" value="<?=$nA?>" >
 				</label>
 
 				<label>Informe o valor B da equação:
-					<input type="number" id="numero" name="nB" required step="0.1" value="1">
+					<input type="number" id="numero" name="nB" required step="0.1" value="<?=$nB?>">
 				</label>
 
 				<label>Informe o valor C da equação:
-					<input type="number" id="numero" name="nC" required step="0.1" value="1">
+					<input type="number" id="numero" name="nC" required step="0.1" value="<?=$nC?>">
 				</label>
 
 				<button name="enviar"> Calcular </button>
@@ -56,7 +56,7 @@
 						echo"<p class='alerta-verde'>A equação possui duas raizes reais:\nx1={$raizum} e x2={$raizdois}</p>";
 					}
 				}else{
-					echo "<p class='alerta-vermelho";
+					echo "<p class='alerta-vermelho> Erro!Informe todas variáveis</p>";
 				}
 			?>
             <a href="" class="link">Voltar</a>
