@@ -1,3 +1,19 @@
+<?php
+	/*
+Pedro está estudando física e quer converter temperaturas de Celsius para Fahrenheit. Crie um formulário 
+que receba a temperatura em Celsius. Em seguida, crie um código PHP que converta a temperatura para Fahrenheit
+ e exiba na tela.
+Dica: A fórmula para converter graus Celsius (C) para graus Fahrenheit (F) é: F = (C * 9/5) + 32
+Onde C é a temperatura em Celsius e F é a temperatura em Fahrenheit.
+Exemplo:
+Entrada:Temperatura em Celsius: 25
+Saída:Temperatura em Fahrenheit: 77°F
+
+
+
+	*/
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,59 +24,14 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Conversor de temperatura!</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
-				</label>
-
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
-
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
+			<h2>CONVERSOR</h2>
+			<form action="resposta.php" method="post">
+				<label>Calcule Celsius para Fahrenheit!:
+					<input type="number" id="celsius" name="celsius" required>
 				</label>
 
 				<button name="enviar"> Enviar </button>

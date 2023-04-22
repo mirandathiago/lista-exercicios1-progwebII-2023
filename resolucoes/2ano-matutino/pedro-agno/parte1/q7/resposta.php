@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php
+
+$c = $_POST["celsius"] ; 
+$f = ($c * 9/5) + 32;
+
+
+
+
+
+
+
+?>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -13,11 +25,10 @@
 	<div class="container">
 		<div class="box resposta">
 			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<p>Resultado Calculado:</p>
+			<p class="alerta-verde"><?php echo "o valor de celsius convertido para fahrenheit é de  {$f} °f"; ?></p>
+			
+            <a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
