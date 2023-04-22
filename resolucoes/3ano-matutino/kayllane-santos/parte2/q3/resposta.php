@@ -1,3 +1,8 @@
+<?php
+	$nome = $_GET["nome"] ?? "";
+	$horario = date("H");
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,16 +13,21 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Saudação</h1>
 	</header>
 	<div class="container">
 		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<?php
+				if($horario >= 05 && $horario < 12){
+					echo "<p class='alerta-azul'>Bom dia, {$nome}!</p>";
+				}else if($horario >= 12 && $horario < 18){
+					echo "<p class='alerta-azul'>Boa tarde, {$nome}!</p>";
+				}else if($horario >= 18 && $horario <= 23){
+					echo "<p class='alerta-azul'>Boa noite, {$nome}!</p>";
+				}else{
+					echo "<p class='alerta-azul'>Vá dormir, está de madrugada!</p>";
+				}
+			?>
 		</div>
 	</div>
 </body>
