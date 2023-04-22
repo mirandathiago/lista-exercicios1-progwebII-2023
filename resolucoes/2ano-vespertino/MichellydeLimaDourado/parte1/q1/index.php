@@ -27,13 +27,15 @@
 			
 			<?php
 			
-				$preco = $_POST["preco"] ?? 10;
+				$metodo = $_SERVER["REQUEST_METHOD"];
+				if($metodo == "POST"){
+				$preco = $_POST["preco"] ?? 50;
 				$desconto = $preco * (10/100);
 				$valorf =  $preco - $desconto;
 			
+				echo "De R$$preco com 10% de desconto, pagará R$$valorf";
+				}
 			?>
-			<p>De R$<?=$preco?> com 10% de desconto, pagará R$<?=$valorf?></p>
-			
 		</div>
 	</div>
 </body>
