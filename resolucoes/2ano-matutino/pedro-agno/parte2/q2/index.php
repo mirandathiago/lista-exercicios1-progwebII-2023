@@ -1,3 +1,20 @@
+
+<?php
+/*
+2- Seu João quer saber quanto vai ser a sua conta de energia no mês apenas olhando para o medidor de energia
+ de sua residência. Para ajudá-lo crie um formulário que receba o consumo de energia elétrica em kWh
+  (quilowatts-hora). Em seguida, crie um código em PHP que calcule o valor da conta de energia com base
+   nas seguintes regras:
+Até 100 kWh, o valor é de R$ 0,50 por kWh.
+De 101 a 200 kWh, o valor é de R$ 0,70 por kWh.
+Acima de 200 kWh, o valor é de R$ 0,87 por kWh.
+Além disso, a conta de energia possui uma taxa mínima de R$ 20,00. Portanto, caso o valor calculado seja inferior a R$ 20,00, o valor a ser cobrado deve ser de R$ 20,00.
+Exemplo de entrada: Consumo de energia: 250 kWh
+Exemplo de saída: Valor da conta de energia: R$ 237,50
+
+*/
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,61 +25,15 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1> consumo de energia elétrica em KWH</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
+			<h2>Calculo o valor da Energia em KWH </h2>
+			<form action="resposta.php" method="get">
+				<label>digite o consumo de energia:
+					<input type="number" id="consumo" name="consumo" >
 				</label>
-
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
-
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
-				</label>
-
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>		

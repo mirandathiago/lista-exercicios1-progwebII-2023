@@ -4,7 +4,7 @@
     padding:0;
 }
 body {
-	background: linear-gradient(to bottom, #4ae6b5, #4a90e2);
+	background: linear-gradient(to bottom, #4ae6b5, orange);
 	font-family: 'Open Sans', sans-serif;
     min-height:100vh;
 }
