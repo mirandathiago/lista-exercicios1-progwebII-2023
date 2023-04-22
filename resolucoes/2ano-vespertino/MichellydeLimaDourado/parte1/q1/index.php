@@ -19,9 +19,7 @@
 
 				<button name="enviar"> Enviar </button>
 			</form>
-		</div>		
-	</div>
-	<div class="container">
+		</div>
 		<div class="box resposta">
 			<h2>Resposta</h2>
 			
@@ -36,6 +34,7 @@
 				echo "De R$$preco com 10% de desconto, pagará R$$valorf";
 				}
 			?>
+		</div>
 		</div>
 	</div>
 </body>
