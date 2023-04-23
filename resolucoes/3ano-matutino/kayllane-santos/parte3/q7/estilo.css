@@ -34,7 +34,7 @@ h2 {
 }
 
 h3 {
-	color: #33cccc;
+	color: #3399ff;
 }
 
 h4 {
@@ -47,7 +47,7 @@ h5 {
 
 p, label, input, textarea, select {
 	color: #000000;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 ul, ol {
@@ -72,6 +72,8 @@ header{
 	flex: 1;
     margin:1rem;
     border-radius: 5px;
+	
+	
 }
 
 .formulario {
@@ -96,7 +98,7 @@ select {
     margin-top:2px;
 	width: 100%;
 	font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	color: #333333;
 	border-radius: 5px;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
@@ -109,18 +111,18 @@ button {
 	border: none;
 	padding: 10px;
 	font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	cursor: pointer;
     border-radius: 5px;
 }
 
 .link {
-	background-color: #4ae6b5;
+	background-color: #4a90e2;
 	color: #ffffff;
 	border: none;
 	padding: 10px;
 	font-size: 16px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	cursor: pointer;
     border-radius: 5px;
     display:inline-block;
@@ -142,7 +144,7 @@ legend {
 	font-weight: bold;
 	color: #333333;
 	margin-bottom: 10px;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 input[type="checkbox"],
@@ -151,8 +153,8 @@ input[type="radio"] {
 }
 
 label {
-	font-size: 14px;
-	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
 	color: #333333;
     
 }
@@ -167,8 +169,8 @@ label {
 }
  
   
-  .alerta-verde {
-    background-color: #4CAF50;
+  .alerta-azul {
+    background-color: #4a90e2;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
