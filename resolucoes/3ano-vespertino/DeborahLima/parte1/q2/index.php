@@ -14,7 +14,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Digite um Número</h2>
-			<form action = "resposta.php" method = "get">
+			<form action = "resposta.php" method = "php">
 				<label>Número:
 					<input type="number" name="num" required>
 				</label>

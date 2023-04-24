@@ -1,5 +1,5 @@
 <?php
-	$numero = $_GET["num"] ?? 2;
+	$numero = $POST["num"] ?? 2;
 
 	$dobro = $numero * 2;
 	$metade = $numero / 2;
