@@ -165,7 +165,7 @@ label {
 }
 
 .alerta-vermelho {
-    background-color: #f44336;
+    background-color: #a02b22;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -192,7 +192,7 @@ label {
 }
   
   .alerta-rosa {
-    background-color: #e365e6;
+    background-color: #fa84db;
     color: #fff;
     padding: 10px;
     border-radius: 5px;

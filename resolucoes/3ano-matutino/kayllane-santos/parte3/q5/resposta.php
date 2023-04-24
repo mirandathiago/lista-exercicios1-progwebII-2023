@@ -29,9 +29,6 @@
 
 				}
 
-				var_dump($valor);
-				var_dump($taxa);
-				var_dump($valormensal);
 				echo "<p class='alerta-azul'>Serão necessários {$meses} meses para quitar a dívida. </p>";
 			?>
             <a href="index.php" class="link">Voltar</a>

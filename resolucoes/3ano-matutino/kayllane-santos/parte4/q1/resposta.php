@@ -20,7 +20,7 @@
 				if(isset($_POST["frutas"])){
 					$frutas = $_POST["frutas"];
 					foreach($frutas as $fruta){
-							echo "<p class='alerta-amarelo'>{$fruta}</p>";
+							echo "<p class='alerta-azul'>{$fruta}</p>";
 							echo "<br>";
 						}
 			}

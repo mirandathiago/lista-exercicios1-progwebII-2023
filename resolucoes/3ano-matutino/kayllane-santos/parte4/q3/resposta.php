@@ -18,13 +18,15 @@
 			<h2>Confirmando pedido</h2>
 			<?php
 			$mensagem = $_POST["mensagem"];
-			if(isset($_POST["sabores"])){
+			if(isset($_POST["sabores"]) && count($_POST["sabores"]) > 0){
 					$sabores = $_POST["sabores"];
 					foreach($sabores as $sabor){
 							echo "<p class='alerta-azul'>Sabor: {$sabor}</p>";
 							echo "<br>";
 						}
-						echo $mensagem == null ? "<p class='alerta-azul'>Não há observações.</p>" : "<p class='alerta-azul'>Observação: {$mensagem}</p>";
+						echo $mensagem == null ? "<p class='alerta-rosa'>Não há observações.</p>" : "<p class='alerta-rosa'>Observação: {$mensagem}</p>";
+			}else{
+				echo "<p class='alerta-vermelho'>Você não selecionou nenhum sabor, refaça seu pedido.</p>";
 			}
 			?>
             <a href="finalizar.html" class="link b">Finalizar pedido</a>

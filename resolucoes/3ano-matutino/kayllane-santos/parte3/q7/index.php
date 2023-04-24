@@ -40,8 +40,8 @@
 				$i = 0;
 
 				if($metodo == "POST"){
-					while($numero >= 0){
-						if($numero >= 100){
+					while($numero > 0){
+						if($numero >= 100){ 
 							$numero -= 100;
 							$nota100++;
 						}else if($numero >= 50){
@@ -59,7 +59,7 @@
 						}else if($numero >= 2){
 							$numero -= 2;
 							$nota2++;
-						}else{
+						}else if($numero == 1){
 							$numero -= 1;
 							$nota1++;
 						}
