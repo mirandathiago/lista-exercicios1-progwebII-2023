@@ -8,7 +8,9 @@ body {
 	font-family: 'Open Sans', sans-serif;
     min-height:100vh;
 }
-
+#pru{
+	display:block;
+}
 h1 {
 	color: #ffffff;
     text-shadow: 0px 2px 2px #333;
@@ -58,6 +60,8 @@ header{
 	flex: 1;
     margin:1rem;
     border-radius: 5px;
+	
+
 }
 
 .formulario {

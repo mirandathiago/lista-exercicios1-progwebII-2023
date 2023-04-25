@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,64 +12,35 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Par ou Impar</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
+			<h2>Inicie o jogo:</h2>
+			<form action="resposta.php" method="post">
+			<label>número:
+					<input type="number" id="num1" name="numuser" max="10" required>
 				</label>
 
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
+			  
 
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
+			  <fieldset>
 				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
+				<legend>Selecione por qual torcerá que seja:</legend>
+				<div>
+				  <input type="radio" id="par" name="opcao" value="par" >
+				  <label for="par">Par</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
+				  <input type="radio" id="impar" name="opcao" value="impar"> 
+				  <label for="impar">Impar</label>
 				</div>
 			  </fieldset>
+			  
 
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
-				</label>
-
+			  
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>		
-	</div>
 </body>
 </html>
