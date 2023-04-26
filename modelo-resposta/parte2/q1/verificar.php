@@ -3,7 +3,7 @@
 	$num2 = $_GET["num2"] ?? 1;
 	$num3 = $_GET["num3"] ?? 1;
 
-	if ($num1>=$num2 && $num1>=$num3) {
+	/*if ($num1>=$num2 && $num1>=$num3) {
 		$maior = $num1;
 		if ($num2>=$num3) {
 			$menor = $num3;
@@ -24,7 +24,27 @@
 		}else {
 			$menor = $num2;
 		}
+	}*/
+	$maior=$num1;
+	$menor=$num1;
+	
+	if($num2 > $maior){
+		$maior = $num2;
 	}
+	else if($num3 > $maior){
+		$maior = $num3;
+	}
+						//não deu certo mas depois deu
+	
+	if($num2 < $menor){
+		$menor = $num2;
+	}else if($num3 < $menor){
+		$menor = $num3;
+	}
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html>
