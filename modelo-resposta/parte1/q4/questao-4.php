@@ -29,12 +29,12 @@
 			<h2>Resposta</h2>
 			<?php
 
-			if ($_SERVER["REQUEST_METHOD"]=="POST") {
-				$distancia = $_POST["klmt"];
-				$gasto = $_POST["gaspl"];
-				$qtdg = $distancia/$gasto;//qtdg = quantidade de gasolina
-				echo "<p class='alerta-amarelo'>Sabendo que a sua viagem será de {$distancia}<sub>Km</sub>, e o seu carro gasta {$gasto}<sub>Km/l</sub>, será necessario ter {$qtdg} Litros de gasolina para chegar ao seu destino!</p>";
-			}
+				if ($_SERVER["REQUEST_METHOD"]=="POST") {
+					$distancia = $_POST["klmt"];
+					$gasto = $_POST["gaspl"];
+					$qtdg = $distancia/$gasto;//qtdg = quantidade de gasolina
+					echo "<p class='alerta-amarelo'>Sabendo que a sua viagem será de {$distancia}<sub>Km</sub>, e o seu carro gasta {$gasto}<sub>Km/l</sub>, será necessario ter {$qtdg} Litros de gasolina para chegar ao seu destino!</p>";
+				}
 
 			?>
 		</div>
