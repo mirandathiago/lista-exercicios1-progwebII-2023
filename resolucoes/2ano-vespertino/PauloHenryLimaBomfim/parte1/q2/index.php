@@ -1,7 +1,7 @@
 <?php
-    $num1 = $_POST["num1"] ?? "";
-    $dobro = (int)$num1 * 2;
-    $metade = (int)$num1 / 2;
+    $num1 = $_POST["num1"] ?? "0";
+    $dobro = $num1 * 2;
+    $metade = $num1 / 2;
 ?>
 <!DOCTYPE html>
 <html>
