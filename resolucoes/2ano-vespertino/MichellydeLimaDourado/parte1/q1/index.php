@@ -12,7 +12,7 @@
 	</header>
 	<div class="container">
 		<div class="box formulario">
-		<form action="index.php" method="post">
+			<form action="index.php" method="post">
 				<label>Valor do porduto:
 					<input type="number" id="preco" name="preco" required>
 				</label>
@@ -34,7 +34,6 @@
 				echo "De R$$preco com 10% de desconto, pagará R$$valorf";
 				}
 			?>
-		</div>
 		</div>
 	</div>
 </body>
