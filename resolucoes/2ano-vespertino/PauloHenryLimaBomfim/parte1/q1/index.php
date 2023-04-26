@@ -12,11 +12,10 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>10% de desconto</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
 			<form arction="index.php" method="post">
 				<label>Entre com um valor para aplicar um desconto de 10%:
 					<input type="number" name="preco" required value="<?=$preco?>">
