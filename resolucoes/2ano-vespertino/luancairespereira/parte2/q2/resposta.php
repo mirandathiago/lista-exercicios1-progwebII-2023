@@ -25,7 +25,7 @@ $kwh = $_POST["kwh"]??0;
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Questão 1</title>
+	<title>Questão 2</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>

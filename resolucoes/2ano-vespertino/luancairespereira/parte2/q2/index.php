@@ -12,7 +12,7 @@ Exemplo de saída: Valor da conta de energia: R$ 237,50
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Questão1</title>
+	<title>Questão 2</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>

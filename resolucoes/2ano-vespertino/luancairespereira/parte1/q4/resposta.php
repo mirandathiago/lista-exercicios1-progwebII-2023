@@ -1,8 +1,8 @@
 <?php
-// quantidade de combustível necessária
+
 	$distancia = $_POST["distancia"] ?? 0;
 	$consumo = $_POST["consumo"] ?? 0;
-	$quantidadecomb = $distancia/$consumo;//quantidade de combustível necessária
+	$quantidadecomb = $distancia/$consumo;//cálculo para saber a quantidade de combustível necessária
 ?>
 <!DOCTYPE html>
 <html>

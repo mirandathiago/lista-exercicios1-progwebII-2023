@@ -27,7 +27,7 @@
 	<div class="container">
 		<div class="box resposta">
 			<h2>Resultado da Média</h2>
-			<?php if($mp > 6){?>
+			<?php/*A criação do bloco php com uma estrutura de condição é para mostrar a resposta com cores diferentes para cada configuração desejada*/ if($mp > 6){?>
 				<p class="alerta-verde"> <?=$mensagem?></p>
 			<?php }elseif($mp == 6){ ?>
 				<p class="alerta-verde"> <?=$mensagem?></p>
