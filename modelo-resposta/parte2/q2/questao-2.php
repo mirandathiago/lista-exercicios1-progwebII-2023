@@ -1,5 +1,19 @@
 <?php
-	$consumo = $_POST["KWH"] ?? 1;
+	$consumo = $_POST["kwh"] ?? 1;
+
+	if ($consumo<100) {
+		$valor=0.50;
+	}else if ($consumo>=100 && $consumo<=200) {
+		$valor=0.70;
+	}else{
+		$valor=0.87;
+	}
+
+	$pagar=$consumo*$valor;
+	
+	if ($pagar<20) {
+		$pagar=20;
+	}
 
 
 ?>
@@ -28,15 +42,9 @@
 		<div class="box resposta">
 			<h2>Resposta</h2>
 			<?php
-
 			if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-
-
-				echo "<p class='alerta-amarelo'></p>";
+				echo "<p class='alerta-amarelo'>O Valor da conta de energia será: R$ {$pagar}</p>";
 			}
-
-
 			?>
 		</div>
 	</div>
