@@ -28,7 +28,7 @@
 
 	<div class="container">
 		<div class="box resposta">
-			<h2>Média Final: <?=$media?></h2>
+			<h2>Media Final: <?=$media?></h2>
 			<p><br>Notas * Peso: <br>
 			<?=$numero1?> * 2 = <?=$nota1?> <br>
 			<?=$numero2?> * 3 = <?=$nota2?> <br>
