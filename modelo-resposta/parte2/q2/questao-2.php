@@ -1,15 +1,13 @@
 <?php
 	$consumo = $_POST["kwh"] ?? 1;
 
-	if($consumo <= 100){
-        $valor = $consumo * 0.5;
-    }
-    elseif($consumo <= 200){
-        $valor = 100 * 0.5 + ($consumo - 100) * 0.7;
-    }
-    else{
-        $valor = 100 * 0.5 + 100 * 0.7 + ($consumo - 200) * 0.87;
-    }
+	if ($consumo<100) {
+		$valor=$consumo*0.50;
+	}else if ($consumo<=200) {
+		$valor=$consumo*0.70;
+	}else{
+		$valor=$consumo*0.87;
+	}
 	
 	if ($valor<20) {
 		$valor=20;

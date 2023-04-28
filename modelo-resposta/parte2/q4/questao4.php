@@ -15,13 +15,13 @@
 			<h2>Entre em contato</h2>
 			<form action="respostavalor.php" method="post">
 				<label>Insira A:
-					<input type="number" id="coeficiente-a" name="coeficiente-a" min="1" required>
+					<input type="number" id="coeficiente-a" name="coeficiente-a" required>
 				</label>
 				<label>Insira B:
-					<input type="number" id="coeficiente-b" name="coeficiente-b" min="1" required>
+					<input type="number" id="coeficiente-b" name="coeficiente-b"  required>
 				</label>
 				<label>Insira C:
-					<input type="number" id="coeficiente-c" name="coeficiente-c" min="1" required>
+					<input type="number" id="coeficiente-c" name="coeficiente-c" required>
 				</label>
 
 				<button type="submit" name="submit"> Calcular </button>
