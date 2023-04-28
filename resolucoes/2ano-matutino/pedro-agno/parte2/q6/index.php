@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,60 +9,22 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Geometria Online</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
+			<h2>Digite o tamanho dos lados do seu triangulo para calcular se será
+				<br>-equilatero<br>-Isosceles<br>-Escaleno<br> Lembrando que para um triangulo poder existir 
+				a soma dos lados menores deve ser maior que o lado maior!
+
+			</h2>
+			<form action="resposta.php" method="post">
+				<label>lado menor 1:
+				<input type="number" id="area1" name="area1" required>lado menor 2:
+					<input type="number" id="area2" name="area2" required>lado maior 3:
+					<input type="number" id="area3" name="area3" required>
 				</label>
 
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
-
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
-				</label>
 
 				<button name="enviar"> Enviar </button>
 			</form>
