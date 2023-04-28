@@ -38,11 +38,13 @@
 				<label>Insira um numero:
 					<input type="number" id="numero" name="num" max="10" min="0" required>
 				</label>
-				<select name="escolha">
-					<option>Escolha Entre Impar ou Par</option>
-					<option value="Impar">Impar</option>
-					<option value="Par">Par</option>
-				</select>
+				<label>
+					Escolha entre par ou impar:
+					<select name="escolha">
+						<option value="Impar">Impar</option>
+						<option value="Par">Par</option>
+					</select>
+				</label>
 				<button name="jogar"> Jogar </button>
 			</form>
 		</div>
