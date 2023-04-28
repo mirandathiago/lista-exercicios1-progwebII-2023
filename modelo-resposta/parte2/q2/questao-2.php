@@ -1,18 +1,18 @@
 <?php
 	$consumo = $_POST["kwh"] ?? 1;
 
-	if ($consumo<100) {
-		$valor=0.50;
-	}else if ($consumo>=100 && $consumo<=200) {
-		$valor=0.70;
-	}else{
-		$valor=0.87;
-	}
-
-	$pagar=$consumo*$valor;
+	if($consumo <= 100){
+        $valor = $consumo * 0.5;
+    }
+    elseif($consumo <= 200){
+        $valor = 100 * 0.5 + ($consumo - 100) * 0.7;
+    }
+    else{
+        $valor = 100 * 0.5 + 100 * 0.7 + ($consumo - 200) * 0.87;
+    }
 	
-	if ($pagar<20) {
-		$pagar=20;
+	if ($valor<20) {
+		$valor=20;
 	}
 
 
@@ -43,7 +43,7 @@
 			<h2>Resposta</h2>
 			<?php
 			if($_SERVER["REQUEST_METHOD"] == "POST"){
-				echo "<p class='alerta-amarelo'>O Valor da conta de energia será: R$ {$pagar}</p>";
+				echo "<p class='alerta-amarelo'>O Valor da conta de energia será: R$ {$valor}</p>";
 			}
 			?>
 		</div>
