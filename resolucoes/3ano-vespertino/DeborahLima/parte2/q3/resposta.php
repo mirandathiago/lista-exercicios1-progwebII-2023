@@ -1,7 +1,5 @@
 <?php
 	$nome = $_POST["nome"];
-
-    date_default_timezone_set('America/Sao_Paulo');
 	$hora = date("H:i A");
 
 	if($hora >= "00:00" && $hora <= "04:59"){
