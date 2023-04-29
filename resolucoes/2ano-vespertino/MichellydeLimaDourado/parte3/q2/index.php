@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,31 +16,25 @@
 			<h2>Entre em contato</h2>
 			<form action="index.php" method="post">
 				<label>Número:
-					<input type="number" id="num" name="num" required>
+					<input type="number" id="num" name="num" required min="0">
 				</label>
-
+				
 				<button name="enviar"> Enviar </button>
 			</form>
-		</div>		
+		</div>
+
 		<div class="box resposta">
 			<?php
-				$metodo = $_SERVER["REQUEST_METHOD"];
-				if($metodo == "POST"){
-					$numero = $_POST["num"] ?? 5;
-					if($numero == 0){
-						echo "<p>O fatorial de {$numero} é igual a 1</p>";
-					}else{
-						$resultado = 1;
-						for($n = 1; $n <= $numero; $n++){
-							
-							$resultado = $resultado * $n;
-							
-						}
-						echo "<p> O fatorial de {$numero} é igual a {$resultado}</p>";
-					}
-
-
+			$m = $_SERVER["REQUEST_METHOD"];
+			if($m == "POST"){
+				$numero = $_POST["num"] ?? 7;
+				$n = 0;
+				while($n <= 10){
+					$resultado = $numero * $n;
+					echo "<p>{$numero} * {$n} = {$resultado} </p>";
+					$n++;
 				}
+			}
 			?>
 		</div>
 	</div>
