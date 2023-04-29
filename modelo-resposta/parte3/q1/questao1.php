@@ -1,19 +1,24 @@
 <?php
 	$num = $_POST["num"] ?? 0;
-	$fatorial = 1;
-	$saida = "";
-	$numin = $num;
-	do {
-		$nums = (string)$num;
-		if ($num > 1) {
-			$saida .= "$nums x ";
-		}else{
-			$saida .= "$nums = ";
-		}  
-		$fatorial *= $num;
-		$num--;
-	} while ($num >= 1);
-	$saida .= "{$fatorial}"
+	if($num != 0){
+		$fatorial = 1;
+		$saida = "";
+		$numin = $num;
+		for($num; $num>=1;$num--){
+			$nums = (string)$num;
+			if ($num > 1) {
+				$saida .= "$nums x ";
+			}else{
+				$saida .= "$nums = ";
+			}  
+			$fatorial *= $num;
+		}
+		$saida .= "{$fatorial}";
+		$p = 1;
+	}else {
+		$p = 0;
+	}
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,8 +45,10 @@
 		<div class="box resposta">
 			<h2>Resposta</h2>
 			<?php
-				if($_SERVER["REQUEST_METHOD"]=="POST"){
+				if($_SERVER["REQUEST_METHOD"]=="POST" && $p == 1){
 					echo "<h3>O fatorial de {$numin} é {$fatorial} <br>O calculo realizado foi: <br>{$saida}</h3>";
+				}else{
+					echo "<h3>O fatorial de {$numin} é 1";
 				}
 			?>
 		</div>
