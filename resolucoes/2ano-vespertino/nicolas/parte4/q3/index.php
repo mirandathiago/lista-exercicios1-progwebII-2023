@@ -8,71 +8,52 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Frutas Preferidas</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
-				</label>
-
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
-
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
+			
+			<form action="index.php" method="get">
+			  <fieldset>
+				<legend>Selecione o sabor de pizza que deseja:</legend>
 				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
+				  <input type="checkbox" id="marguerita" name="sabores[]" value="marguerita">
+				  <label for="marguerita">Marguerita</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
+				  <input type="checkbox" id="calabresa" name="sabores[]" value="calabresa">
+				  <label for="calabresa">Calabresa</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
+				  <input type="checkbox" id="baiana" name="sabores[]" value="baiana">
+				  <label for="baiana">Baiana</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
+				  <input type="checkbox" id="queijo" name="sabores[]" value="queijo">
+				  <label for="queijo">Queijo</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
+				  <input type="checkbox" id="portuguesa" name="sabores[]" value="portuguesa">
+				  <label for="portuguesa">Portuguesa</label>
 				</div>
 			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
-				</label>
-
-				<button name="enviar"> Enviar </button>
+				
+				<button> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
 			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<?php
+            
+            $sabores = $_GET["sabores"] ?? [];
+
+            foreach($sabores as $sabores){
+                echo "<h3>{$sabores}</h3>";
+            }
+
+            
+            
+            ?>
 		</div>
 	</div>
 </body>
