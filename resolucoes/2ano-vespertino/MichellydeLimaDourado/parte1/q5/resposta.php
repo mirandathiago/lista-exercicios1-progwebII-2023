@@ -8,7 +8,7 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Formulário</h1>
 	</header>
 	<div class="container">
 		<div class="box resposta">

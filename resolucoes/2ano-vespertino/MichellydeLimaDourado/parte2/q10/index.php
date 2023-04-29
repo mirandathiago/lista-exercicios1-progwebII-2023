@@ -28,11 +28,10 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Questão 10</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
 			<form acton="index.php" method="get">
 
 				<label>Dia da semana:

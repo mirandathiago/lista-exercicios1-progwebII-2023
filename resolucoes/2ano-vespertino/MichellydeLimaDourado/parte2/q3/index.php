@@ -8,13 +8,12 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Questão 3</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
 			<form action="resposta.php" method="get">
-				<label>Nome:
+				<label>Seu nome:
 					<input type="text" id="nome" name="nome" required>
 				</label>
 
