@@ -1,3 +1,16 @@
+<?php
+
+    /*2- Crie um formulário com um campo numérico e que ao ser enviado 
+    irá mostrar o dobro e a metade deste número.
+
+    Entrada: 4
+    Saída: Dobro: 8 e Metade: 2*/
+
+    $num = $_POST["num"] ?? 0;
+    $dobro = $num * 2;
+    $metade = $num / 2;
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,73 +20,42 @@
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
+
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Dobro e Metade</h1>
 	</header>
+
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
-				</label>
 
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
+			<h2>Digite o número inteiro desejado:</h2>
+			<form action="index.php" method="post">
 
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
+				<label>Digite aqui:
+					<input type="number" name="num" required value="<?=$num?>">
 				</label>
 
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
-		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
-		</div>
+        <div class="box resposta">
+			<h2>Resultado</h2>
+			<?php
+
+                $metodo = $_SERVER["REQUEST_METHOD"]; //  dados do servidopr e da requisição que está ocorrendo no momento.
+
+                if($metodo == "POST"){ // verifica se o metodo é post e imrpime a mensagem na tela
+
+                    echo "<p class='alerta-verde'>O dobro de {$num} é: {$dobro}.<br>A metade de {$num} é: {$metade}.</p>";
+
+                }else{ // se não for post, é pq aguarda o envio do formulário
+
+                    echo "<p class='alerta-amarelo'>AGUARDANDO O ENVIO DO FORMULÁRIO</p>";
+
+                }
+
+            ?>
+		</div>		
 	</div>
 </body>
 </html>
