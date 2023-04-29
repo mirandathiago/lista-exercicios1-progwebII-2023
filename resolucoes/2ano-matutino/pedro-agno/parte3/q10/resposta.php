@@ -1,3 +1,11 @@
+<?php
+
+$num_linhas = $_GET['escada'];
+
+
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,9 +22,15 @@
 		<div class="box resposta">
 			<h2>Resposta</h2>
 			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
+			<p class="alerta-verde"><?php for($i = 1; $i <= $num_linhas; $i++){
+	echo "$i";
+	for($j= 1; $j <= $i; $j++){
+		echo  "*";
+	}
+	echo "<br>";
+
+} ?></p>
+			
             <a href="" class="link">Voltar</a>
 		</div>
 	</div>
