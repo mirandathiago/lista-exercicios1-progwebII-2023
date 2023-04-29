@@ -1,6 +1,5 @@
 
 <?php
-
     /*6- João irá comprar uma terreno para construir sua casa e para isso gostaria de calcular a área total desse terreno, 
     crie um formulário que receba a largura e o comprimento do terreno, em seguida crie um código 
     PHP que irá calcular esta área e exibir na tela.
