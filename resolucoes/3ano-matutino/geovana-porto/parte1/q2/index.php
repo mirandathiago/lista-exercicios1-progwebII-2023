@@ -1,8 +1,8 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
 	$numero = $_POST["numero"] ?? 0;
 	
-	
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$dobro = $numero * 2;
 	$metade = $numero / 2;
 	}
@@ -35,8 +35,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		</div>
 		<div class="box resposta">
 			<h2>Resposta</h2>
-			<p>Dobro: <?= $dobro ?> e Metade:  <?= $metade?> </p>
-
+			<?php
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			echo "Dobro: $dobro  e Metade:   $metade";
+			}
+?>
 		</div>
 	</div>
 </body>
