@@ -1,71 +1,55 @@
+<?php
+
+    /*
+
+    Crie um formulário em HTML que solicita ao usuário o número de linhas que deseja exibir no padrão de asteriscos. 
+    Em seguida, crie um script PHP que use a técnica de loop aninhado para construir o padrão de asteriscos, 
+    com base no número de linhas fornecido pelo usuário.
+    O script PHP deve receber o número de linhas do formulário, verificar se o valor recebido é um 
+    número inteiro válido e, em seguida, criar o padrão de asteriscos com base no número de linhas fornecido.
+
+    Ao final, exiba o padrão de asteriscos completo na tela, utilizando HTML e CSS para formatar a exibição do padrão.
+
+    Entrada: 5
+    Saída: 
+    *  
+    * *  
+    * * *  
+    * * * *  
+    * * * * * 
+
+    Dica: É necessária a utilização de duas estruturas de repetição uma dentro da outra.
+
+    */
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Formulário</title>
+	<title>Questão 10</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
+
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Linhas em *</h1>
 	</header>
+
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
+
+			<form action="receber10.php" method="post">
+
+				<label>Digite o valor do número de linhas que deseja:
+                <input type="number" name="nl" min=1 step="1" required> 
 				</label>
-
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
-
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
-				</label>
-
-				<button name="enviar"> Enviar </button>
+                
+				<button name="enviar"> Calcular </button>
 			</form>
-		</div>		
+		</div>
 	</div>
 </body>
 </html>
