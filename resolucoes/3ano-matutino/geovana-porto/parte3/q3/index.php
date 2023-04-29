@@ -1,7 +1,7 @@
 <?php
 
-$num1 = $_GET["num1"] ?? 0;
-$num2 = $_GET["num2"] ?? 0;
+$num1 = $_POST["num1"] ?? 0;
+$num2 = $_POST["num2"] ?? 0;
 
 
 $quant = 0;
@@ -24,7 +24,7 @@ $quant = 0;
 			<h2>Números</h2>
 			<hr>
 			<br>
-			<form action="index.php" method="get">
+			<form action="index.php" method="post">
 				<label>Número 1:
 					<input type="number" id="numero" name="num1" required>
 				</label>
@@ -44,7 +44,7 @@ $quant = 0;
        
         if($num1 > $num2){
         $num1 = $num2;
-        $num2 = $_GET["num1"];
+        $num2 = $_POST["num1"];
     }
         for($i= $num1; $i <= $num2; $i++){
           if($i % 2 == 0){
@@ -52,7 +52,7 @@ $quant = 0;
           }
        
     }
-	if ($_SERVER["REQUEST_METHOD"] == "GET") {
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Quantidade de números pares:", " ", $quant;
 	}
 ?>
