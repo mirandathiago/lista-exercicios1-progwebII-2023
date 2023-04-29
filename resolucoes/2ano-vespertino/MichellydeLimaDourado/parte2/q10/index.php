@@ -1,5 +1,5 @@
 <?php
-	$dia = $_POST["dia"] ?? "";
+	$dia = $_GET["dia"] ?? "";
 	switch($dia){
 		case "1":
 			$resposta = "<p class='alerta-verde'>Final de semana</p>";
@@ -33,7 +33,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Entre em contato</h2>
-			<form acton="index.php" method="post">
+			<form acton="index.php" method="get">
 
 				<label>Dia da semana:
 					<select name="dia">
@@ -57,7 +57,7 @@
 			<?php
 
 				$metodo = $_SERVER["REQUEST_METHOD"];
-				if($metodo == "POST"){
+				if($metodo == "GET"){
 					echo "<p>{$resposta}</p>";
 				}
 
