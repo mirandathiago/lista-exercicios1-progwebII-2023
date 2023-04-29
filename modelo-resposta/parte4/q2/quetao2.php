@@ -24,7 +24,6 @@
 		<div class="box resposta">
 			<h2>Resposta</h2>
 			<?php
-
 				if ($_SERVER["REQUEST_METHOD"] == "POST"){
 					$pessoas = $_POST["pessoas"] ?? 0;
 					$arrayNomes = explode("\n",$pessoas);
@@ -33,7 +32,6 @@
 					$nomeSorteado = $arrayNomes[$numSorteado];
 					echo "<h3>Dentre os nomes listados, o sortudo(a) foi {$nomeSorteado}</h3>";
 				}
-
 			?>
 		</div>
 	</div>
