@@ -1,5 +1,4 @@
 <?php
-
     /*2- Crie um formulário com um campo numérico e que ao ser enviado 
     irá mostrar o dobro e a metade deste número.
 
