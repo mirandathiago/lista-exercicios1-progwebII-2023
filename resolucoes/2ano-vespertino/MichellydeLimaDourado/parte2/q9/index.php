@@ -60,7 +60,7 @@
 			<?php
 				$metodo = $_SERVER["REQUEST_METHOD"];
 
-				if($metodo = "POST"){
+				if($metodo == "POST"){
 					echo "<p>{$resposta}</p>";
 				}
 			?>
