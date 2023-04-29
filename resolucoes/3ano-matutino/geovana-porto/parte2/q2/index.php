@@ -3,11 +3,9 @@
 
 $energia = $_GET["energia"] ?? 0;
 
-
 $acrescimo50 = 0.50;
 $acrescimo70 = 0.70;
 $acrescimo87 = 0.87;
-
 
 ?>
 
@@ -40,8 +38,6 @@ $acrescimo87 = 0.87;
 			<br>
 			<?php
      
-     if ($_SERVER["REQUEST_METHOD"] == "GET") {
-       
      if($energia <= 100){
        $valor = $energia * $acrescimo50;
        }else if($energia <= 200 ){
@@ -52,9 +48,9 @@ $acrescimo87 = 0.87;
         }if($valor < 20){
          $valor = 20.00;
          }
-        }
+		 if ($_SERVER["REQUEST_METHOD"] == "GET") {
          echo "O valor da conta de energia é: R$", $valor = number_format($valor, 2, ',', '.');
-   
+		 }
    ?>
 		</div>
 	</div>
