@@ -47,7 +47,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Entre em contato</h2>
-			<form action="formulario-resposta.php" method="post">
+			<form action="index.php" method="post">
 			   <fieldset>
 				<legend>Selecione o Dia da Semana:</legend>
 				<div>
@@ -91,7 +91,7 @@
 					echo "<p class='alerta-amarelo'>aguardando o envio</p>";
 				}
 			?>
-            <a href="formulario-resposta.php" class="link">Voltar</a>
+            <a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>

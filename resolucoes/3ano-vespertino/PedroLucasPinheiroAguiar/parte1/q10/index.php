@@ -1,8 +1,11 @@
 <?php
 	$metodo = $_SERVER["REQUEST_METHOD"];
-	$CelTemp = $_POST["CelTemp"] ?? 0;
+	$Emp = $_POST["Emp"] ?? 1;
+	$Mes = $_POST["Mes"] ?? 1;
+	$Tax = 0.025;
 
-	$FarenTemp = round(($CelTemp * 9/5) + 32,2);
+	$Mont = round($Emp * pow((1+$Tax), $Mes),2);
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -18,24 +21,27 @@
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form action="formulario-resposta.php" method="post">
-				<label>Temperatura em Celsius:
-					<input type="text" id="tempe" name="CelTemp" required value="<?=$CelTemp?>">
+			<h2>Calculadora de Juros Compostos</h2>
+			<form action="index.php" method="post">
+				<label>Emprestimo:
+					<input type="text" id="nome" name="Emp" value="<?=$Emp?>" required>
+				</label>
+				<label>Meses:
+					<input type="text" id="nome" name="Mes" value="<?=$Mes?>" required>
 				</label>
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Temperatura Calculada</h2>
+			<h2>Montate Total a se Pagar</h2>
 			<?php
 				if($metodo == "POST"){
-					echo "<p class='alerta-verde'>$FarenTemp</p>";
+					echo "<p class='alerta-verde'>$Mont</p>";
 				} else {
 					echo "<p class='alerta-amarelo'>aguardando o envio</p>";
 				}
 			?>
-            <a href="formulario-resposta.php" class="link">Voltar</a>
+			<a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>

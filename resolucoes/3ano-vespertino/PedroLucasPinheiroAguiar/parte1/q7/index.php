@@ -1,10 +1,8 @@
 <?php
 	$metodo = $_SERVER["REQUEST_METHOD"];
-	$Num = $_POST["Num"] ?? 1;
-	$cont = 1;
-	for($i=1; $i <= $Num; $i++){
-		$cont = $cont * $i;
-	}
+	$CelTemp = $_POST["CelTemp"] ?? 0;
+
+	$FarenTemp = round(($CelTemp * 9/5) + 32,2);
 ?>
 <!DOCTYPE html>
 <html>
@@ -20,24 +18,24 @@
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Calculadora de Fatorial</h2>
-			<form action="formulario-resposta.php" method="post">
-				<label>Insira o Número:
-					<input type="number" id="nome" name="Num" value="<?=$Num?>" required>
+			<h2>Entre em contato</h2>
+			<form action="index.php" method="post">
+				<label>Temperatura em Celsius:
+					<input type="text" id="tempe" name="CelTemp" required value="<?=$CelTemp?>">
 				</label>
-				<button name="enviar"> Fatorar </button>
+				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Resposta</h2>
+			<h2>Temperatura Calculada</h2>
 			<?php
 				if($metodo == "POST"){
-					echo "<p class='alerta-verde'>$cont</p>";
+					echo "<p class='alerta-verde'>$FarenTemp</p>";
 				} else {
 					echo "<p class='alerta-amarelo'>aguardando o envio</p>";
 				}
 			?>
-            <a href="formulario-resposta.php" class="link">Voltar</a>
+            <a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>

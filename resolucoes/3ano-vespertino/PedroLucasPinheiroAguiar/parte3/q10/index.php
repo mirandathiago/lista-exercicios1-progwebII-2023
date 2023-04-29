@@ -1,12 +1,8 @@
 <?php
 	$metodo = $_SERVER["REQUEST_METHOD"];
-	$Emp = $_POST["Emp"] ?? 1;
-	$Mes = $_POST["Mes"] ?? 1;
-	$Tax = 0.025;
-
-	$Mont = round($Emp * pow((1+$Tax), $Mes),2);
-
+	$NumL = $_POST["NumL"] ?? 1;
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,31 +13,33 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Fazedor de Piramide</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Calculadora de Juros Compostos</h2>
-			<form action="formulario-resposta.php" method="post">
-				<label>Emprestimo:
-					<input type="text" id="nome" name="Emp" value="<?=$Emp?>" required>
-				</label>
-				<label>Meses:
-					<input type="text" id="nome" name="Mes" value="<?=$Mes?>" required>
+			<h2>Insira as Informações</h2>
+			<form action="index.php" method="post">
+				<label>Número de Camadas:
+					<input type="number" id="nome" name="NumL" required>
 				</label>
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Montate Total a se Pagar</h2>
+			<h2>Resposta</h2>
 			<?php
 				if($metodo == "POST"){
-					echo "<p class='alerta-verde'>$Mont</p>";
+					for ($i=1;$i<=$NumL;$i++) {
+						for ($x=1; $x<=$i; $x++){
+							echo "*";
+						}
+						echo "<br>";
+					}
 				} else {
 					echo "<p class='alerta-amarelo'>aguardando o envio</p>";
 				}
 			?>
-			<a href="formulario-resposta.php" class="link">Voltar</a>
+            <a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>

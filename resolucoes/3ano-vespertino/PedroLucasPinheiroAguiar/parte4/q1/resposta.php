@@ -23,7 +23,7 @@
 				}
 				
 			?>
-            <a href="formulario.html" class="link">Voltar</a>
+            <a href="index.html" class="link">Voltar</a>
 		</div>
 	</div>
 </body>

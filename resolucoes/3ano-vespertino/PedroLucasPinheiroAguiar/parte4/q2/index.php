@@ -22,7 +22,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Lista de Nomes</h2>
-			<form action="formulario-resposta.php" method="post">
+			<form action="index.php" method="post">
 				<label>Insira os nomes (quebre a linha ao inserir outro nome):
 					<textarea id="mensagem" name="nomes" required></textarea>
 				</label>
@@ -40,7 +40,7 @@
 				echo "<p class='alerta-amarelo'>aguardando o envio</p>";
 			}
 			?>
-            <a href="" class="link">Voltar</a>
+            <a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
