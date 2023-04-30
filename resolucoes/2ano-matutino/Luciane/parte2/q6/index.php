@@ -77,7 +77,7 @@ if($mensagem == "verdadeiro"){ // se for possível formar um triângulo, verific
 	<div class="container">
 		<div class="box formulario">
 			<h2>Informe os valores desejados</h2>
-			<form action = "quest06.php" method = "get">				
+			<form action = "index.php" method = "get">				
 				<label>Informe um valor:
 					<input type="number" name="n1" required value = "<?=$n1?>">
 				</label>
