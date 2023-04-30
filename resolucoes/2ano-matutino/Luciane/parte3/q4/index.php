@@ -24,7 +24,7 @@ $n = $_GET["n"] ?? 0; //recupera o valor informado
 	<div class="container">
 		<div class="box formulario">
 			<h2>Soma dos números</h2>
-			<form action = "quest04.php" method = "get">				
+			<form action = "index.php" method = "get">				
 				<label>Informe um número:
 					<input type="number" name="n" required value = "<?=$n?>">
 				</label>	
