@@ -8,46 +8,46 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Cardápio de pizza</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
+			<h2>Escolha seus sabores</h2>
 			<form action="index.php" method="post">
 				
 			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
+				<legend>Selecione suas pizzas:</legend>
 				<div>
-				  <input type="checkbox" id="banana" name="frutas[]" value="banana">
-				  <label for="banana">Banana</label>
+				  <input type="checkbox" id="mussarela" name="sabores[]" value="mussarela">
+				  <label for="mussarela">Mussarela</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="morango" name="frutas[]" value="morango">
-				  <label for="morango">Morango</label>
+				  <input type="checkbox" id="portuguesa" name="sabores[]" value="portuguesa">
+				  <label for="portuguesa">Portuguesa</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="uva" name="frutas[]" value="uva">
-				  <label for="uva">Uva</label>
+				  <input type="checkbox" id="carne seca" name="sabores[]" value="carne seca">
+				  <label for="carne seca">Carne seca</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas[]" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
+				  <input type="checkbox" id="calabresa" name="sabores[]" value="calabresa">
+				  <label for="calabresa">Calabresa</label>
 				</div>
 				<div>	
-				  <input type="checkbox" id="laranja" name="frutas[]" value="laranja">
-				  <label for="laranja">Laranja</label>
+				  <input type="checkbox" id="frango" name="sabores[]" value="frango">
+				  <label for="frango">Frango</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="abacate" name="frutas[]" value="abacate">
-				  <label for="abacate">Abacate</label>
+				  <input type="checkbox" id="4 queijos" name="sabores[]" value="4 queijos">
+				  <label for="4 queijos">4 queijos</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="limão" name="frutas[]" value="limão">
-				  <label for="limão">Limão</label>
+				  <input type="checkbox" id="abacaxi" name="sabores[]" value="abacaxi">
+				  <label for="abacaxi">Abacaxi</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="acerola" name="frutas[]" value="acerola">
-				  <label for="acerola">Acerola</label>
+				  <input type="checkbox" id="nutela" name="sabores[]" value="nutela">
+				  <label for="nutela">Nutela</label>
 				</div>
 			  </fieldset>
 
@@ -55,11 +55,11 @@
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Lista de Frutas:</h2>
+			<h2>Pedido:</h2>
 			<?php
-				$frutas = $_POST["frutas"] ?? [];
-				foreach($frutas as $fruta){
-					echo "<li>{$fruta}</li>";
+				$sabores = $_POST["sabores"] ?? [];
+				foreach($sabores as $pizza){
+					echo "<li>{$pizza}</li>";
 				}
 			?>
 			
