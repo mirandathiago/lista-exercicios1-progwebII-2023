@@ -19,7 +19,7 @@
 	<div class="container">
 		<div class="box formulario">
 			
-			<form action = "quest03.php" method = "get"> 
+			<form action = "index.php" method = "get"> 
 			  <fieldset>
 				<legend>Escolha o sabor de pizza desejado:</legend>
 				<div>
