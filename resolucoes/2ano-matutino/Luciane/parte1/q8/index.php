@@ -37,7 +37,7 @@ Saída: Valor total a pagar: R$ 1.480,00
 	<div class="container">
 		<div class="box formulario">
 			<h2>Calculadora de juros</h2>
-			<form action = "quest08.php" method = "get">				
+			<form action = "q08.php" method = "get">				
 				<label>Informe o Valor do Celular:
 					<input type="number" name="valor" required value = "<?=$c?>">
 				</label>
