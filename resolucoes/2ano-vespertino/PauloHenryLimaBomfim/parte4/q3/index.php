@@ -8,71 +8,49 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Frutas</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
-				</label>
-
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
-
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
+			<form arction="index.php" method="post">
+			<fieldset>
+				<legend>Selecione os sabores de pizza:</legend>
 				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
+				  <input type="checkbox" id="banana" name="pizzas[]" value="Calabresa">
+				  <label for="Calabresa">Calabresa</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
+				  <input type="checkbox" id="morango" name="pizzas[]" value="Portuguesa">
+				  <label for="Portuguesa">Portuguesa</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
+				  <input type="checkbox" id="uva" name="pizzas[]" value="Quatro queijos">
+				  <label for="Quatro queijos">Quatro queijos</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
+				  <input type="checkbox" id="abacaxi" name="pizzas[]" value="Caipira">
+				  <label for="Caipira">Caipira</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
+				  <input type="checkbox" id="laranja" name="pizzas[]" value="Napolitana">
+				  <label for="Napolitana">Napolitana</label>
 				</div>
 			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
-				</label>
-
-				<button name="enviar"> Enviar </button>
+				
+				<button> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<h2>Você escolheu os seguintes sabores:</h2>
+			<?php $metodo = $_SERVER["REQUEST_METHOD"];
+				if($metodo == "POST"){
+					$pizza = $_POST["pizzas"] ?? [];
+					foreach($pizza as $pizzas){
+						print "<li> {$pizzas}</li>";
+					}
+			} else{
+				print("Envie o formulário!");
+			}?>
 		</div>
 	</div>
 </body>
