@@ -4,75 +4,59 @@
 	<meta charset="UTF-8">
 	<title>Formulário</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="../../estilo.css">
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Pizzaria</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
-				</label>
-
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
-
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
+			<h2>Escolha os sabores:</h2>
+			<form action="index.php" method="get">
 
 			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
+				<h3>Sabores de Pizzas:</h3>
 				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
+				  <input type="checkbox" id="calabresa" name="pizzas[]" value="calabresa">
+				  <label for="calabresa">Calabresa</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
+				  <input type="checkbox" id="portuguesa" name="pizzas[]" value="portuguesa">
+				  <label for="portuguesa">Portuguesa</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
+				  <input type="checkbox" id="baiana" name="pizzas[]" value="baiana">
+				  <label for="baiana">Baiana</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
+				  <input type="checkbox" id="vegetariana" name="pizzas[]" value="vegetariana">
+				  <label for="vegetariana">Vegetariana</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
+				  <input type="checkbox" id="napolitana" name="pizzas[]" value="napolitana">
+				  <label for="napolitana">Napolitana</label>
 				</div>
 			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
-				</label>
 
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<h2>Sabores</h2>
+			<?php
+			$metodo = $_SERVER["REQUEST_METHOD"];
+			
+				if($metodo == "GET" && isset($_GET["enviar"])){
+					$pizza = $_GET["pizzas"];
+					echo "<p>Os sabores escolhidos foram:</p>";
+					foreach($pizza as $pizzas){
+						echo "$pizzas<br>";
+					}
+				}else{
+					echo"<p>Aguardando Operação</p>";}
+            ?>
+            <a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
