@@ -1,78 +1,44 @@
+<?php
+	$num = $_POST["num"] ?? 0;
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Formulário</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="../../estilo.css">
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Soma dos Números</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
-				</label>
-
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
-
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
+			<h2>Informe</h2>
+			<form action="index.php" method="post">
+				<label>Quantidade de números para serem somados:
+					<input type="number" id="number" name="num" value="<?=$num?>" required>
 				</label>
 
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<h2>Resultado</h2>
+			<?php
+                $metodo = $_SERVER["REQUEST_METHOD"];
+				
+				if($metodo == "POST"){
+					$soma = 0;
+					for($i = 1; $i <= $num; $i += 1){
+							$soma = $soma + $i;	
+						}
+					echo "A soma de todos os números é {$soma}<br>";
+				}else{
+					echo"<p>Aguardando Operação</p>";}
+            ?>
+			<a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
