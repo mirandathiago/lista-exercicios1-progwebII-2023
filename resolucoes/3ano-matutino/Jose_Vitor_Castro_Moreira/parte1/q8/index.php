@@ -47,7 +47,8 @@
 					echo "Aguardando Informação";
 				}
 			?>
-			 <a href="" class="link">Voltar</a>
+			<br>
+			<a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
