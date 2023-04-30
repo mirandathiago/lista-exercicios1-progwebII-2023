@@ -23,7 +23,7 @@
 				</label>
 
 				<label>Peso (em kg):
-					<input type="number" id="peso" name="peso" step="0.1" required>
+					<input type="number" id="peso" name="peso" step="0.01" required>
 				</label>
 
 				<label>Altura (em cm):

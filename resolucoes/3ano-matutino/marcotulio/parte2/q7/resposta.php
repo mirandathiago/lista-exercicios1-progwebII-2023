@@ -1,4 +1,4 @@
-<?=
+<?php
 	$nome = $_POST["nome"] ?? João;
 	$idade = $_POST["idade"] ?? 30;
 	$peso = $_POST["peso"] ?? 70;

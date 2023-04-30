@@ -1,6 +1,15 @@
 <?php
 	$iniciointervalo = $_POST["iniciointervalo"] ?? 3;
 	$fimintervalo = $_POST["fimintervalo"] ?? 15;
+
+	$contadorpares = 0;
+	for($i=$iniciointervalo;$i<=$fimintervalo;$i++){
+		if($i%2 == 0){
+			$contadorpares += 1; // O mesmo que: $contadorpares = $contadorpares + 1;
+		}
+	}
+
+	$status = "Quantidade de números pares: " . $contadorpares;
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,13 +26,7 @@
 	<div class="container">
 		<div class="box resposta">
 			<h2>Formulário de Números Pares</h2>
-			<?php
-				$qtdnumerospares = 0;
-				for($i=$iniciointervalo;$i>$fimintervalo;$i+2){
-					$qtdnumerospares = (integer) $fimintervalo/$iniciointervalo; 
-				}
-				echo "Quantidade números pares = " . $qtdnumerospares;
-			?>
+			<p><?=$status?></p>
             <a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>

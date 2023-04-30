@@ -37,13 +37,6 @@
 				  <label for="Maçã">Maçã</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="Pera" name="frutas[]" value="Pera">
-				  <label for="Pera">Pera</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="Uva" name="frutas[]" value="Uva">
-				  <label for="Uva">Uva</label>
-				</div>
 			  </fieldset>
 
 				<button name="enviar"> Enviar </button>

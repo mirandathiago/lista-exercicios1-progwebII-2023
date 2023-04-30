@@ -1,4 +1,4 @@
-<?=
+<?php
 	$valoremprestimo = $_POST["valoremprestimo"] ?? 5000;
 	$numesesemprestimo = $_POST["numesesemprestimo"] ?? 12;
 

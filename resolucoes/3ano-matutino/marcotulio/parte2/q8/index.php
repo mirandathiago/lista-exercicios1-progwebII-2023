@@ -15,11 +15,11 @@
 			<h2>Formulário de IMC (Índice de Massa Corporal)</h2>
 			<form action="resposta.php" method="post">
 				<label>Peso:
-					<input type="number" id="peso" name="peso" step="0.1" value="70" required>
+					<input type="number" id="peso" name="peso" step="0.01" required>
 				</label>
 
 				<label>Altura:
-					<input type="number" id="altura" name="altura" step="0.01" value="1.70" required>
+					<input type="number" id="altura" name="altura" step="0.01" required>
 				</label>
 
 				<button name="enviar"> Enviar </button>

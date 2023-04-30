@@ -15,11 +15,9 @@
 			<h2>Formulário de Frutas Favoritas</h2>
 			<?php
 				echo "Frutas escolhidas: ";
-				if(isset($_POST["frutas"])){
-					$frutas = $_POST["frutas"];
-					foreach($frutas as $fruta){
-						echo "<p class='alerta-azul'>{$fruta}</p><br>";
-					}
+				$frutas = $_POST["frutas"];
+				foreach($frutas as $fruta){
+					echo "<p class='alerta-azul'>{$fruta}</p><br>";
 				}
 			?>
             <a href="index.php" class="link">Voltar</a>

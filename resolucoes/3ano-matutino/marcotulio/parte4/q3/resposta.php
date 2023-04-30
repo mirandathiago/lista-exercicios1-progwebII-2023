@@ -14,15 +14,10 @@
 		<div class="box resposta">
 			<h2>Formulário de Sabores de Pizza</h2>
 			<?php
-				if(isset($_POST["sabores"]) && count($_POST["sabores"]) > 0){
-					$sabores = $_POST["sabores"];
-					echo "Sabores escolhidos: ";
-					foreach($sabores as $sabor){
-						echo "<p class='alerta-azul'>{$sabor}</p>";
-						echo "<br>";
-					}
-				}else{
-					echo "<p class='alerta-vermelho'>Você não selecionou nenhum sabor, refaça seu pedido</p>";
+				$sabores = $_POST["sabores"];
+				echo "Sabores escolhidos: ";
+				foreach($sabores as $sabor){
+					echo "<p class='alerta-azul'>{$sabor}</p>" . "<br>";
 				}
 			?>
             <a href="finalizar.php" class="link b">Finalizar pedido</a>

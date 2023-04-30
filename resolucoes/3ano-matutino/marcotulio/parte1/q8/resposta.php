@@ -1,4 +1,4 @@
-<?=
+<?php
 	$valorcel = $_POST["valorcel"] ?? 1000;
 	$qtdparcelas = $_POST["qtdparcelas"] ?? 0;
 
