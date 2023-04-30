@@ -9,9 +9,6 @@
  	levaria 29 meses para ser quitada, porém leva na verdade 36*/
 ?>
 
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,13 +44,12 @@
 			<?php
 				$metodo = $_SERVER["REQUEST_METHOD"];
 				if($metodo =="POST"){
-
-					while($divida >= 0){
+					while($divida > 0){
 						$divida += ($divida * ($taxa/100));
 						$divida = $divida - $valormes;
 						$tempopagando += 1;
 					}
-
+					
 					echo"<h2>Tempo necessário para quitação da dívida:</h2>";
 					echo"<p class='alerta-amarelo'>Serão necessários {$tempopagando} meses:</p>";	
 				}

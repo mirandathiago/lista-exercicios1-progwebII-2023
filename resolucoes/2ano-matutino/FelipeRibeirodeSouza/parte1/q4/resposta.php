@@ -1,11 +1,8 @@
 <?php
 	$distancia = $_POST["distancia"] ?? 1;
 	$consumo = $_POST["consumo"] ?? 1;
-
 	$combustivelnecessario = $distancia / $consumo;
-
 ?>
-
 
 <!DOCTYPE html>
 <html>

@@ -1,6 +1,9 @@
 <?php
 	$nome= $_POST["nome"] ?? "usuário";
-	$horaatual= date('H:i');
+	Date_default_timezone_set('America/Bahia');
+	//Função que define um fusorario de um local, no caso a Bahia
+	$horaatual= date('H');
+
 	
 	if($horaatual >= 5 && $horaatual <= 12){
 		$mensagem="Bom dia!";
@@ -41,7 +44,7 @@
 			<?php
 				$metodo = $_SERVER["REQUEST_METHOD"];
 				if($metodo =="POST"){
-					echo "<p>A hora é {$horaatual}</p>";
+					echo "<p>São {$horaatual} horas</p>";
 					echo "<p>{$mensagem} {$nome}</p>";
 				}
 			?>

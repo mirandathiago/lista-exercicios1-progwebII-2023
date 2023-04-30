@@ -2,7 +2,7 @@
 	$consumo=$_POST["consumo"] ?? 0;
 	$valorapagar = 0;
 
-	if($consumo<100){
+	if($consumo<=100){
 		$valorapagar= ($consumo*0.50)+20;
 	}else if($consumo >= 101 && $consumo <=200){
 		$valorapagar= (($consumo-100)*0.70) + (100*0.50)+20;
@@ -10,7 +10,8 @@
 		$valorapagar = ((100*0.50)+(100*0.70)+(($consumo-200)*0.87))+20;
 	}
 /*No enunciado dessa questão havia que 250Kwh resultaria em uma conta de 237 reais.
- Porém segundo as regras para calcular o valor a pagar, 237 reais seria o equivalente a 311 KWh  */
+ Porém segundo as regras para calcular o valor a pagar, 237 reais seria o equivalente a 311 KWh
+ , e o verdadeiro valor de 250 seria de 183,5  */
 ?>
 
 <!DOCTYPE html>

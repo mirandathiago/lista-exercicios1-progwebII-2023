@@ -1,14 +1,20 @@
 <?php
-	$nA=$_POST["nA"] ?? 1;
-	$nB=$_POST["nB"] ?? 1;
-	$nC=$_POST["nC"] ?? 1;
+	$metodo = $_SERVER["REQUEST_METHOD"];
+	if($metodo == "POST"){
+		$nA=$_POST["nA"];
+		$nB=$_POST["nB"];
+		$nC=$_POST["nC"];
 
-	$delta = ($nB ** 2) - (4*$nA*$nC);
+		$delta = ($nB ** 2) - (4*$nA*$nC);
 
-	$raizum= (-$nB + sqrt($delta))/(2*$nA);
+		$raizum= (-$nB + sqrt($delta))/(2*$nA);
 
-	$raizdois= (-$nB - sqrt($delta))/(2*$nA);
+		$raizdois= (-$nB - sqrt($delta))/(2*$nA);
 
+		$mensagem = "Resultado:";
+	}else{
+		$mensagem = "Informe Valores válidos";
+	}
 ?>
 
 
@@ -46,18 +52,18 @@
 		<div class="box resposta">
 			<h2>Resposta</h2>
 			<?php
-				$metodo = $_SERVER["REQUEST_METHOD"];
-				if($metodo =="POST"){
+				if($metodo == "POST"){
+					echo "<p class='alerta-verde'>$mensagem</p>";
 					if($delta < 0){
 						echo"<p class='alerta-vermelho'>A equação não possui raizes reais</p>";
 					}else if($delta == 0){
 						echo"<p class='alerta-verde'>A equação possui apenas 1 raiz real:\n{$raizum}</p>";
 					}else{
-						echo"<p class='alerta-verde'>A equação possui duas raizes reais:\nx1={$raizum} e x2={$raizdois}</p>";
+						echo"<p class='alerta-verde'>A equação possui duas raizes reais:\nx1= {$raizum} e x2= {$raizdois}</p>";
 					}
 				}else{
-					echo "<p class='alerta-vermelho> Erro!Informe todas variáveis</p>";
-				}
+					echo "<p class='alerta-vermelho'>$mensagem</p>";
+				}	
 			?>
             <a href="" class="link">Voltar</a>
 		</div>

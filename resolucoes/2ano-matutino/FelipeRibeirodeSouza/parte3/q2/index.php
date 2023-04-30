@@ -19,7 +19,7 @@
 		<div class="box formulario">
 			<h2>Digite o número do qual deseja-se saber a tabuada:</h2>
 			<form action="index.php" method="post">
-				<label>Nome:
+				<label>Número:
 					<input type="number" id="numero" name="numero" required>
 				</label>
 
@@ -28,10 +28,11 @@
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Tabuada do número <?=$numero?></h2>
+			
 			<?php
 				$metodo = $_SERVER["REQUEST_METHOD"];
 				if($metodo =="POST"){
+					echo"<h2>Tabuada do número $numero</h2>";
 					$i= 0;
 					while($i<=10){
 						$resultado = $numero * $i;
