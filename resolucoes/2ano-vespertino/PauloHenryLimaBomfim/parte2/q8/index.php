@@ -1,3 +1,10 @@
+<?php
+    $nome = $_POST["nome"] ?? "";
+	$idade = $_POST["idade"] ?? "";
+	$peso = $_POST["peso"] ?? "";
+	$altura = $_POST["altura"] ?? "";
+	$sexo = $_POST["sexo"] ?? "Masculino";
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,71 +15,45 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Bom dia, boa tarde, boa noite, vá dormir</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
+			<form arction="index.php" method="post">
+				<label>Entre com seu nome:
+					<input type="text" name="nome" required value="<?=$nome?>">
 				</label>
-
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
+				<label>Entre com sua idade:
+					<input type="number" name="idade" required value="<?=$idade?>">
 				</label>
-
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
+				<label>Entre com seu peso:
+					<input type="number" name="peso" required value="<?=$peso?>">
 				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
-				</label>
-
-				<button name="enviar"> Enviar </button>
+				<label>Entre com sua altura:
+					<input type="number" name="altura" required value="<?=$altura?>">
+				</label> 
+				<input type="radio" value="masculino" name="sexo"> Masculino 
+				<br> 
+				<input type="radio" value="feminino" name="sexo"> Feminino 
+				
+				<button> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
 			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<?php $metodo = $_SERVER["REQUEST_METHOD"];
+				if($metodo == "POST"){
+					if($sexo == "Masculino"){
+						$tmb = 88.36 + (13.4 * $peso) + (4.8 * $altura) - (5.7 * $idade);
+					}
+					else{
+						$tmb = 447.6 + (9.2 * $peso) + (3.1 * $altura) - (4.3 * $idade);
+					}
+					?>
+			<h2><?=$nome?>, sua taxa metabolica basal(TMB) é de aproximadamente <?=$tmb?> calorias por dia.</h2>
+			<?php }else{
+				print("Envie o formulário!");
+			}?>
 		</div>
 	</div>
 </body>
