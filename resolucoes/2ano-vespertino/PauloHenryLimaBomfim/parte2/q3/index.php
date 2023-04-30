@@ -1,3 +1,22 @@
+<?php
+    $nome = $_POST["nome"] ?? "";
+	date_default_timezone_set('America/Sao_Paulo');
+	$hora = date('H');
+	$saida = "";
+	if($hora >= 05 && $hora <= 12){
+		$saida = "Bom dia, ";
+	}
+	else if($hora >= 13 && $hora < 18){
+		$saida = "Boa tarde, ";
+	}
+	else if($hora >= 18 && $hora <= 23){
+		$saida = "Boa noite, ";
+	}
+	else if($hora >= 00 && $hora <=04){
+		$saida = "Vá dormir, está de madrugada!";
+	}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,71 +27,26 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Bom dia, boa tarde, boa noite, vá dormir</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
+			<form arction="index.php" method="post">
+				<label>Entre com seu nome:
+					<input type="text" name="nome" required value="<?=$nome?>">
 				</label>
-
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
-
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
-				</label>
-
-				<button name="enviar"> Enviar </button>
+				
+				<button> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
 			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<?php $metodo = $_SERVER["REQUEST_METHOD"];
+				if($metodo == "POST"){?>
+			<h2><?=$saida?><?=$nome?>!</h2>
+			<?php }else{
+				print("Envie o formulário!");
+			}?>
 		</div>
 	</div>
 </body>

@@ -1,7 +1,7 @@
 <?php
-    $num1 = $_POST["num1"] ?? "0";
-	$num2 = $_POST["num2"] ?? "0";
-	$num3 = $_POST["num3"] ?? "0";
+    $num1 = $_POST["num1"] ?? "";
+	$num2 = $_POST["num2"] ?? "";
+	$num3 = $_POST["num3"] ?? "";
 	$maior = $num1;
 	$menor = $num1;
 	if ($num1 >= $num2){
@@ -66,7 +66,13 @@
 		</div>
 		<div class="box resposta">
 			<h2>Resposta</h2>
+			<?php $metodo = $_SERVER["REQUEST_METHOD"];
+				if($metodo == "POST"){?>
 			<h2>Menor número: <?=$menor?> e o Maior número: <?=$maior?></h2>
+			<?php }else{
+				print("Envie o formulário!");
+			}?>
+			
 		</div>
 	</div>
 </body>

@@ -1,7 +1,6 @@
 <?php
-    $num1 = $_POST["num1"] ?? "0";
-    $dobro = $num1 * 2;
-    $metade = $num1 / 2;
+    $num1 = $_POST["num1"] ?? "";
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +26,14 @@
 		</div>
 		<div class="box resposta">
 			<h2>Resposta</h2>
-			<h2>Dobro: <?=$dobro?> e Metade: <?=$metade?></h2>
+			<?php $metodo = $_SERVER["REQUEST_METHOD"];
+				if($metodo == "POST"){$dobro = $num1 * 2;
+    $metade = $num1 / 2;?>
+			</h2<h2>Dobro: <?=$dobro?> e Metade: <?=$metade?></h2>
+			<?php }else{
+				print("Envie o formulário!");
+			}?>
+			
 		</div>
 	</div>
 </body>

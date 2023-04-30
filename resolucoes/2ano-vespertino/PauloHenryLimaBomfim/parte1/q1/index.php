@@ -26,7 +26,13 @@
 		</div>
 		<div class="box resposta">
 			<h2>Resposta</h2>
+			<?php $metodo = $_SERVER["REQUEST_METHOD"];
+				if($metodo == "POST"){?>
 			<h2>Valor do produto com desconto: R$<?=$calculo?>!</h2>
+			<?php }else{
+				print("Envie o formulário!");
+			}?>
+			
 		</div>
 	</div>
 </body>
