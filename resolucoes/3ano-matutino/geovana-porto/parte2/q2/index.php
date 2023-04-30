@@ -1,7 +1,7 @@
 <?php
 
 
-$energia = $_GET["energia"] ?? 0;
+$energia = $_POST["energia"] ?? 0;
 
 $acrescimo50 = 0.50;
 $acrescimo70 = 0.70;
@@ -24,7 +24,7 @@ $acrescimo87 = 0.87;
 	<div class="container">
 		<div class="box formulario">
 			<h2>Consumo de energia</h2>
-			<form action="index.php" method="get">
+			<form action="index.php" method="post">
 				<label>Energia (KWh):
 					<input type="number" id="energia" name="energia" required>
 				</label>
@@ -48,7 +48,7 @@ $acrescimo87 = 0.87;
         }if($valor < 20){
          $valor = 20.00;
          }
-		 if ($_SERVER["REQUEST_METHOD"] == "GET") {
+		 if ($_SERVER["REQUEST_METHOD"] == "POST") {
          echo "O valor da conta de energia é: R$", $valor = number_format($valor, 2, ',', '.');
 		 }
    ?>
