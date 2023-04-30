@@ -23,7 +23,7 @@ Quantidade de números pares: 6
 	<div class="container">
 		<div class="box formulario">
 			<h2>Informe dois números: </h2>
-			<form action = "quest03.php" method = "get">				
+			<form action = "index.php" method = "get">				
 				<label>Informe um número:
 					<input type="number" name="n1" required value = "<?=$n1?>">
 				</label>
