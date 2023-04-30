@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Entre em contato</h2>
-			<form action="respostavalor.php" method="post">
+			<form action="resposta.php" method="post">
 				<label>Insira A:
 					<input type="number" id="coeficiente-a" name="coeficiente-a" required>
 				</label>

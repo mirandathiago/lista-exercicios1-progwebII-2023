@@ -16,7 +16,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Entre em contato</h2>
-			<form action="questao1.php" method="post">
+			<form action="index.php" method="post">
 			<fieldset>
 				<legend>Selecione suas frutas favoritas:</legend>
 				<div>

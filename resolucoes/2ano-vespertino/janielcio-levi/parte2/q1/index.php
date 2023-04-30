@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Insira valores</h2>
-			<form action="verificar.php" method="get">
+			<form action="resposta.php" method="get">
 				<label>Numero 1:
 					<input type="number" id="num1" name="num1" required>
 				</label>

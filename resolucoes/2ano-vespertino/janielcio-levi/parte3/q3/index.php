@@ -1,5 +1,12 @@
 <?php
-	$l = $_POST["num"] ?? 0; 
+	$numin = $_POST["numin"] ?? 0;
+	$numf = $_POST["numf"] ?? 0;
+	$cont = 0;
+	for ($i = $numin; $i <= $numf; $i++) { 
+		if ($i % 2 == 0) {
+			$cont++;
+		}
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,9 +23,12 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Entre em contato</h2>
-			<form action="questao10.php" method="post">
-				<label>Insira o valor de linhas:
-					<input type="number" id="num" name="num" min="1" required>
+			<form action="index.php" method="post">
+				<label>Insira o inicio do intervalo:
+					<input type="number" id="numin" name="numin" required>
+				</label>
+				<label>Insira o fim do intervalo:
+					<input type="number" id="numf" name="numf" required>
 				</label>
 				<button name="enviar"> Enviar </button>
 			</form>
@@ -27,16 +37,7 @@
 			<h2>Resposta</h2>
 			<?php
 				if ($_SERVER["REQUEST_METHOD"] == "POST") {
-					$saida="";
-					for ($i=0; $i < $l; $i++) {
-						for ($j=0; $j <$l ; $j++) { 
-							if($i >= $j){
-								$saida .= " *";
-							}
-						}
-						$saida .= "<br>";
-					}
-					echo "{$saida}";
+					echo "<h3>A quantidade de numeros pares existentes no intervalo de {$numin} - {$numf} é :<br> {$cont}</h3>";
 				}
 			?>
 		</div>

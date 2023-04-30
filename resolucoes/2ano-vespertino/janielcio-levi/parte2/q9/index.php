@@ -42,7 +42,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Entre em contato</h2>
-			<form action="questao9.php" method="post">
+			<form action="index.php" method="post">
 				<label>
 					Selecione o clima do dia:
 					<select name="clima">

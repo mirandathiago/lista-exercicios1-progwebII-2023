@@ -34,7 +34,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Entre em contato</h2>
-			<form action="questao5.php" method="post">
+			<form action="index.php" method="post">
 				<label>Insira um numero:
 					<input type="number" id="numero" name="num" max="10" min="0" required>
 				</label>

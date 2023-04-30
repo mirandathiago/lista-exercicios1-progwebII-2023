@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Qual foi a sua viagem?</h2>
-			<form action="questao-4.php" method="post">
+			<form action="index.php" method="post">
 				<label>Quantos quilometros voçê irá pecorrer?
 					<input type="number" id="km" name="klmt" required><!--kmlt = quilometros-->
 				</label>

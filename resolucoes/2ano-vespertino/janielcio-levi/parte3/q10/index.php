@@ -1,3 +1,6 @@
+<?php
+	$l = $_POST["num"] ?? 0; 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,24 +16,27 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Entre em contato</h2>
-			<form action="quetao2.php" method="post">
-				<label>Insira nomes para serem sorteados:
-					<textarea id="pessoas" name="pessoas"></textarea>
+			<form action="index.php" method="post">
+				<label>Insira o valor de linhas:
+					<input type="number" id="num" name="num" min="1" required>
 				</label>
-
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
 			<h2>Resposta</h2>
 			<?php
-				if ($_SERVER["REQUEST_METHOD"] == "POST"){
-					$pessoas = $_POST["pessoas"] ?? 0;
-					$arrayNomes = explode("\n",$pessoas);
-					$qtdSorteio = count($arrayNomes);
-					$numSorteado = rand(0,$qtdSorteio-1);
-					$nomeSorteado = $arrayNomes[$numSorteado];
-					echo "<h3>Dentre os nomes listados, o sortudo(a) foi {$nomeSorteado}</h3>";
+				if ($_SERVER["REQUEST_METHOD"] == "POST") {
+					$saida="";
+					for ($i=0; $i < $l; $i++) {
+						for ($j=0; $j <$l ; $j++) { 
+							if($i >= $j){
+								$saida .= " *";
+							}
+						}
+						$saida .= "<br>";
+					}
+					echo "{$saida}";
 				}
 			?>
 		</div>

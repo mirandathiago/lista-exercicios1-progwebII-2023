@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>A nossa loja te dá 10% de desconto:</h2>
-			<form action="questao-1.php" method="post">
+			<form action="index.php" method="post">
 				<label>Valor da compra:
 					<input type="number" id="precoin" name="precoin" required>
 				</label>
