@@ -15,7 +15,7 @@
 </head>
 <body>
 	<header>
-		<h1>Bom dia, boa tarde, boa noite, vá dormir</h1>
+		<h1>TMB calculadora</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
