@@ -16,23 +16,23 @@
 			<fieldset>
 				<legend>Selecione os sabores de pizza:</legend>
 				<div>
-				  <input type="checkbox" id="banana" name="pizzas[]" value="Calabresa">
+				  <input type="checkbox" id="Calabresa" name="pizzas[]" value="Calabresa">
 				  <label for="Calabresa">Calabresa</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="morango" name="pizzas[]" value="Portuguesa">
+				  <input type="checkbox" id="Portugal" name="pizzas[]" value="Portuguesa">
 				  <label for="Portuguesa">Portuguesa</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="uva" name="pizzas[]" value="Quatro queijos">
+				  <input type="checkbox" id="QuatroQueijos" name="pizzas[]" value="Quatro queijos">
 				  <label for="Quatro queijos">Quatro queijos</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="abacaxi" name="pizzas[]" value="Caipira">
+				  <input type="checkbox" id="Caipira" name="pizzas[]" value="Caipira">
 				  <label for="Caipira">Caipira</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="laranja" name="pizzas[]" value="Napolitana">
+				  <input type="checkbox" id="Napoli" name="pizzas[]" value="Napolitana">
 				  <label for="Napolitana">Napolitana</label>
 				</div>
 			  </fieldset>
