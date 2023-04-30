@@ -1,78 +1,57 @@
+<?php
+	$altura = $_GET["altura"] ?? 0;
+	$peso = $_GET["peso"] ?? 0;
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
 	<title>Formulário</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="../../estilo.css">
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Ìndice de Massa Corporal</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
+			<h2>Informe</h2>
+			<form action="index.php" method="get">
+				<label>Peso (kg):
+					<input type="number" id="number" name="peso" min="0" value="<?=$peso?>" required>
 				</label>
 
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
+				<label>Altura (M):
+					<input type="number" id="number" name="altura" min="0" step="0.01" value="<?=$altura?>" required>
 				</label>
-
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
-				</label>
-
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
 			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<?php
+				$metodo = $_SERVER["REQUEST_METHOD"];
+
+				if($metodo == "GET"  && isset($_GET["enviar"])){
+					$imc = ($peso / ($altura ** 2));
+					$meta = round($imc,2);
+					if($imc < 18.5){
+						 "Seu IMC é $meta,você está abaixo do peso.<br>";
+					}else if($imc >= 18.5 && $imc <= 24.9){
+						echo "Seu IMC é $meta, você está com o peso normal.<br>";
+					}else if($imc >= 25 && $imc <= 29.9){
+						echo "Seu IMC é $meta, você está com sobrepeso.<br>";
+					}else if($imc >= 30 && $imc <= 34.9){
+						echo "Seu IMC é $meta, você está com obesidade grau 1.<br>";
+					}else if($imc >= 35 && $imc <= 39.9){
+						echo "Seu IMC é $meta, você está com obesidade grau 2.<br>";
+					}else{
+						echo "Seu IMC é $meta, você está com obesidade grau 3.<br>";}
+				}else{
+					echo "<p>Aguardando Informação</p>";
+				}
+			?>
 		</div>
 	</div>
 </body>
