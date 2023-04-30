@@ -53,6 +53,7 @@
 					echo "Aguardando Informação";
 				}
 			?>
+			<br>
 			<a href="" class="link">Voltar</a>
 		</div>
 	</div>
