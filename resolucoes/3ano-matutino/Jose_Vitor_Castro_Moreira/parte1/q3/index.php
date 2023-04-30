@@ -41,7 +41,7 @@
 			<?php
 				$metodo = $_SERVER["REQUEST_METHOD"];
 
-				if($metodo = "POST"){
+				if($metodo == "POST"){
 					if($media >= 6){
 						echo "Sua média foi: $media";
 						?><p class="alerta-verde">APROVADO!</p><?php
