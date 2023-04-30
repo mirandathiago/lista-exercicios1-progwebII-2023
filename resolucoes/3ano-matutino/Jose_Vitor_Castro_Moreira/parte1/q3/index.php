@@ -3,7 +3,7 @@
 	$nota2 = $_POST["n2"] ?? 0;
 	$nota3 = $_POST["n3"] ?? 0;
 	
-	$media = (($nota1 * 2) + ($nota2 * 3) + ($nota3 * 5)) / 10;
+	$media = round((($nota1 * 2) + ($nota2 * 3) + ($nota3 * 5)) / 10);
 ?>
 <!DOCTYPE html>
 <html>
@@ -53,6 +53,7 @@
 					echo "Aguardando Informação";
 				}
 			?>
+			<a href="" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
