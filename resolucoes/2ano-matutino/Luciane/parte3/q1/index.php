@@ -27,7 +27,7 @@ $n1 = $_GET["n1"] ?? 0; // recupera o valor de n1
 	<div class="container">
 		<div class="box formulario">
 			<h2>Informe um número para encontrar o fatorial</h2>
-			<form action = "quest01.php" method = "get">				
+			<form action = "index.php" method = "get">				
 				<label>Informe um número:
 					<input type="number" name="n1" required value = "<?=$n1?>">
 				</label>
