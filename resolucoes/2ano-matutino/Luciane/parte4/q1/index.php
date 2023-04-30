@@ -18,7 +18,7 @@
 	<div class="container">
 		<div class="box formulario">
 			
-			<form action = "quest01.php" method = "get"> 
+			<form action = "index.php" method = "get"> 
 			  <fieldset>
 				<legend>Selecione suas frutas favoritas:</legend>
 				<div>
