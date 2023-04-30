@@ -27,7 +27,7 @@ $number = $_GET["numero"] ?? 0;
 	<div class="container">
 		<div class="box formulario">
 			<h2>TABUADA DE UM NÚMERO</h2>
-			<form action = "quest02.php" method = "get">				
+			<form action = "index.php" method = "get">				
 				<label>Informe um número:
 					<input type="number" name="numero" required value = "<?=$number?>">
 				</label>
