@@ -47,7 +47,7 @@
 				}
 			?>
 			<br>
-			<a href="" class="link">Voltar</a>
+			<a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
