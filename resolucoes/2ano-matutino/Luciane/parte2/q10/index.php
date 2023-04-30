@@ -60,7 +60,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Dias Úteis</h2>
-			<form action = "quest10.php" method = "get">				
+			<form action = "index.php" method = "get">				
 			<select name="semana">
 				<option <?=$sem == "1" ? "selected" : ""?> value = "1">Domingo</option> <?php//sem atribui um case para cada opção do campo semana?>
 				<option <?=$sem == "2" ? "selected" : ""?> value = "2">Segunda</option>
