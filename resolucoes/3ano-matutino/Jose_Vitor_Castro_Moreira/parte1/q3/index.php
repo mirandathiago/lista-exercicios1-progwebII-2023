@@ -52,7 +52,6 @@
 				}else{
 					echo "Aguardando Informação";
 				}
-
 			?>
 		</div>
 	</div>
