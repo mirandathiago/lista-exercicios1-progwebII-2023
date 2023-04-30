@@ -43,6 +43,8 @@
 			}else{
 				echo "<p>Aguardando Informação</p>";}
 			?>
+			<br>
+			<a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
