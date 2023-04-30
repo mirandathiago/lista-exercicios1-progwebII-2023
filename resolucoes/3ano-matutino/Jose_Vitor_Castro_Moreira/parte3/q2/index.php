@@ -1,6 +1,6 @@
 <?php
-	$multi = $_POST["multi"] ?? "";
-	$quant = $_POST["quant"] ?? "";
+	$multi = $_POST["multi"] ?? 0;
+	$quant = $_POST["quant"] ?? 0;
 ?>
 <!DOCTYPE html>
 <html>
@@ -43,6 +43,7 @@
 				}else{
 					echo"<p>Aguardando Operação</p>";}
             ?>
+			<a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
