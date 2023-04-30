@@ -39,7 +39,7 @@ Saída: Menor Número: 1 e o Maior Número: 5
 	<div class="container">
 		<div class="box formulario">
 			<h2>Achando o maior e menor número</h2>
-			<form action = "quest01.php" method = "get">				
+			<form action = "index.php" method = "get">				
 				<label>Informe um número:
 					<input type="number" name="n1" required value = "<?=$n1?>">
 				</label>
