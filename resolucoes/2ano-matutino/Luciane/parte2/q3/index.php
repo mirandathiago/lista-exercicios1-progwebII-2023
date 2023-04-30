@@ -43,7 +43,7 @@ Saída: Bom dia, João!
 	<div class="container">
 		<div class="box formulario">
 			<h2>Saudações!</h2>
-			<form action = "quest03.php" method = "get">				
+			<form action = "index.php" method = "get">				
 				<label>Informe seu nome:
 					<input type="text" name="nome" required>
 				</label>	
