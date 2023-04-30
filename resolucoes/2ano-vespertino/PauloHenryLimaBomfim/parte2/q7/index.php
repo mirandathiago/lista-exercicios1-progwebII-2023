@@ -32,7 +32,7 @@
 				<label>Entre com sua altura:
 					<input type="number" name="altura" required value="<?=$altura?>">
 				</label> 
-				<input type="radio" value="masculino" name="sexo"> Masculino 
+				<input type="radio" value="Masculino" name="sexo"> Masculino 
 				<br> 
 				<input type="radio" value="feminino" name="sexo"> Feminino 
 				
