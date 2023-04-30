@@ -27,11 +27,19 @@
 			<h2>Resposta</h2>
 			<?php $metodo = $_SERVER["REQUEST_METHOD"];
 				if($metodo == "POST"){
-					$horas = intdiv($tempo, 3600);
-					$minutos = intdiv(($tempo%3600), 60);
-					$segundos = ($tempo%3600)% 60;
-					print "{$horas}:{$minutos}:$segundos";
-			} else{
+					$hora = 0;
+					$minuto = 0;
+					while($tempo >= 3600){
+						$tempo -=3600;
+						$hora++;
+					}
+					while($tempo >= 60){
+						$tempo -= 60;
+						$minuto++;
+					}
+					print("{$hora}:{$minuto}:{$tempo}");
+			} 
+			else{
 				print("Envie o formulário!");
 			}?>
 		</div>
