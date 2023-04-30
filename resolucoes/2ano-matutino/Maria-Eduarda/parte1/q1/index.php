@@ -3,7 +3,6 @@
 <!--2- Crie um formulário com um campo numérico e que ao ser enviado irá mostrar o dobro e a metade deste número.
 Entrada: 4
 Saída: Dobro: 8 e Metade: 2
-
  --->
 <head>
     <meta charset="UTF-8">
