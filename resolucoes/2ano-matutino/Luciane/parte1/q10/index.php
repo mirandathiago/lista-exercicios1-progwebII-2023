@@ -38,7 +38,7 @@ onde:
 	<div class="container">
 		<div class="box formulario">
 			<h2>Calculadora de juros compostos</h2>
-			<form action = "q10.php" method = "get">				
+			<form action = "index.php" method = "get">				
 				<label>Informe o Valor do Empréstimo:
 					<input type="number" name="valor" required value = "<?=$c?>">
 				</label>
