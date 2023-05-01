@@ -30,18 +30,3 @@
     </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-<?php
-$celsius = $_POST["celsius"] ?? 0;
-$fahrenheit = ($celsius * 9 / 5) + 32;
-
-?>
