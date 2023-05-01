@@ -20,7 +20,7 @@
 		<div class="box formulario">
 			<h2>Celsius para Fahrenheit</h2>
 			<br>
-			<form action="index7.php" method="get">
+			<form action="index.php" method="get">
 				<label>Temperatura (em graus Celsius):
 					<input type="number" id="nome" name="tc" min="0" step="0.1" required>
 				</label>

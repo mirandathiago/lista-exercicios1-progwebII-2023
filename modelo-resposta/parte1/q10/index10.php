@@ -22,7 +22,7 @@
 		<div class="box formulario">
 			<h2>Valores</h2>
 			<br>
-			<form action="index10.php" method="post">
+			<form action="index.php" method="post">
 				<label>Valor do Empréstimo:
 					<input type="number" id="nome" name="vi" min=0 step=0.01 required>
 				</label>

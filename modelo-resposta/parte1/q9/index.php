@@ -21,7 +21,7 @@
 		<div class="box formulario">
 			<h2>Conversão de Moeda</h2>
 			<br>
-			<form action="index9.php" method="get">
+			<form action="index.php" method="get">
 				<label>Valor (em reais):
 					<input type="number" id="nome" name="real" min="0" step="0.01" required>
 				</label>

@@ -21,7 +21,7 @@
 		<div class="box formulario">
 			<h2>Área do Terreno</h2>
 			<br>
-			<form action="index6.php" method="get">
+			<form action="index.php" method="get">
 				<label>Largura (em m):
 					<input type="number" id="nome" name="l" min="0" step="0.1" required>
 				</label>

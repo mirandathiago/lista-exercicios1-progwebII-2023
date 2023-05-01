@@ -22,7 +22,7 @@
 		<div class="box formulario">
 			<h2>Calculadora de Notas</h2>
 			<br>
-			<form action="index3.php" method="post">
+			<form action="index.php" method="post">
 				<label>Nota 1 (Peso 2):
 					<input type="number" id="nome" name="num1" min="0" max="10" step="0.01" required>
 				</label>

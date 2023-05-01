@@ -21,7 +21,7 @@
 		<div class="box formulario">
 			<h2>Insira o número</h2>
 			<br>
-			<form action="index2.php" method="post">
+			<form action="index.php" method="post">
 				<label>Número:
 					<input type="number" id="nome" name="num" required>
 				</label>

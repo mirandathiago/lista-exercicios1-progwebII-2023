@@ -18,7 +18,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Desconto de 10%</h2>
-			<form action="index1.php" method="get">
+			<form action="index.php" method="get">
 				<label>Valor:
 					<input type="number" id="nome" name="valor" step="0.01" required>
 				</label>

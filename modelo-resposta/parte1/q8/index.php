@@ -22,7 +22,7 @@
 		<div class="box formulario">
 			<h2>Parcelamento</h2>
 			<br>
-			<form action="index8.php" method="post">
+			<form action="index.php" method="post">
 				<label>Valor Inicial:
 					<input type="number" id="nome" name="vi" min=0 step=0.01 required>
 				</label>
