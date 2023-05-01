@@ -1,78 +1,60 @@
+<?php
+	$l1 = $_GET["la"] ?? 1;
+	$l2 = $_GET["lb"] ?? 1;
+	$l3 = $_GET["lc"] ?? 1;
+
+	if(($l1 < ($l2 + $l3)) && ($l2 < ($l1 + $l3)) && ($l3 < ($l1 + $l2))){
+		$alerta = "alerta-verde";
+
+		if($l1 == $l2 && $l2 == $l3){
+			$mensagem = "Triângulo é equilátero!";
+		}else if(($l1 == $l2) || ($l1 == $l3) || ($l2 == $l3)){
+			$mensagem = "Triângulo é isósceles!";
+		}else{
+			$mensagem = "Triângulo é escaleno!";
+		}
+	}else{
+		$alerta = "alerta-vermelho";
+		$mensagem = "Triângulo não existe!";
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Formulário</title>
+	<title>Questão 6</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Triângulo</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
+			<h2>Lados</h2>
+			<br>
+			<form action="index.php" method="get">
+				<label>Insira o valor do lado a:
+					<input type="number" id="nome" name="la" min=1 required>
 				</label>
 
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
+				<label>Insira o valor do lado b:
+					<input type="number" id="nome" name="lb" min=1 required>
 				</label>
 
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
+				<label>Insira o valor do lado c:
+					<input type="number" id="nome" name="lc" min=1 required>
 				</label>
 
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<h2>Resultado</h2>
+			<br>
+			<p class="<?=$alerta?>"><?=$mensagem?></p>
 		</div>
 	</div>
 </body>
