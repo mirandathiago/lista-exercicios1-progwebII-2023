@@ -60,7 +60,7 @@
 	</header>
 	<div class="container">
 		<div class="box resposta">
-			<h2>Resposta</h2>
+			<h2>Após verificar os numeros:</h2>
 			<?php
 				if ($_SERVER["REQUEST_METHOD"]=="GET") {
 					echo "<p class='alerta-verde'>O maior numero encontrado foi: {$maior}<br>O menor numero encontrado foi: {$menor}</p>";

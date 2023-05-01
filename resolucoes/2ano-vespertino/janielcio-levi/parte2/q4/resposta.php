@@ -33,7 +33,7 @@
 				}
 			
 			?>
-			<a href="questao4.php" class="link">Voltar</a>
+			<a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
