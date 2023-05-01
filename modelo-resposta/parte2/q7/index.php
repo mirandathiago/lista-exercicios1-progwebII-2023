@@ -1,78 +1,72 @@
+<?php
+	$nome = $_GET["nome"] ?? "";
+	$idade = $_GET["idade"] ?? 1;
+	$peso = $_GET["peso"] ?? 1;
+	$altura = $_GET["altura"] ?? 1;
+	$genero = $_GET["genero"] ?? 1;
+
+	switch($genero){
+		case 1:
+			$tmb = 88.36 + (13.4*$peso) + (4.8*$altura) - (5.7*$idade);
+			$mensagem = "{$nome}, sua Taxa de Metabolismo Basal é de aproximadamente {$tmb} calorias por dia.";
+			break;
+		case 2:
+			$tmb = 447.6 + (9.2*$peso) + (3.1*$altura) - (4.3*$idade);
+			$mensagem = "{$nome}, sua Taxa de Metabolismo Basal é de aproximadamente {$tmb} calorias por dia.";
+			break;
+		default:
+			$mensagem = "Não é possível definir sua TMB.";
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Formulário</title>
+	<title>Questão 7</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Calculadora de TMB</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
+			<h2>Dados</h2>
+			<br>
+			<form action="index.php" method="get">
+				<label>Insira seu nome:
 					<input type="text" id="nome" name="nome" required>
 				</label>
 
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
+				<label>Insira a idade (em anos):
+					<input type="number" id="nome" name="idade" min=1 required>
 				</label>
 
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
+				<label>Insira o peso (em kg):
+					<input type="number" id="nome" name="peso" min=1 required>
 				</label>
 
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
+				<label>Insira a altura (em cm):
+					<input type="number" id="nome" name="altura" min=1 required>
+				</label>
 
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
+				<label>Gênero:
+				<br>
+				<input type=radio name=genero value="1">M
+				<br>
+				<input type=radio name=genero value="2">F
+				<br><br>
 				</label>
 
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<h2>Resultado</h2>
+			<br>
+			<p class="alerta-amarelo"><?=$mensagem?></p>
 		</div>
 	</div>
 </body>
