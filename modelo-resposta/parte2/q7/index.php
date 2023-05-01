@@ -45,11 +45,11 @@
 				</label>
 
 				<label>Insira o peso (em kg):
-					<input type="number" id="nome" name="peso" min=1 required>
+					<input type="number" id="nome" name="peso" step=0.01 min=1 required>
 				</label>
 
 				<label>Insira a altura (em cm):
-					<input type="number" id="nome" name="altura" min=1 required>
+					<input type="number" id="nome" name="altura" step=0.01 min=1 required>
 				</label>
 
 				<label>Gênero:
