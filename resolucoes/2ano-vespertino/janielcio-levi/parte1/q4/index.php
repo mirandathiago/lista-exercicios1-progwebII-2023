@@ -26,7 +26,7 @@
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Resposta</h2>
+			<h2>Gasolina Gasta</h2>
 			<?php
 
 				if ($_SERVER["REQUEST_METHOD"]=="POST") {

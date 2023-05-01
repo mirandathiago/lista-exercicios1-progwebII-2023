@@ -8,11 +8,11 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Baskhara</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
+			<h2>Insira os valores da equação de 2º grau:</h2>
 			<form action="resposta.php" method="post">
 				<label>Insira A:
 					<input type="number" id="coeficiente-a" name="coeficiente-a" required>

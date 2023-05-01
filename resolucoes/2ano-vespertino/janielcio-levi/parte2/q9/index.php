@@ -37,14 +37,14 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Recomendação de Passeio</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
+			<h2>Selecione o clima do dia:</h2>
 			<form action="index.php" method="post">
 				<label>
-					Selecione o clima do dia:
+					Climas possiveis:
 					<select name="clima">
 						<option value="Ensolarado">Ensolarado</option>
 						<option value="Ameno">Ameno</option>
@@ -57,7 +57,7 @@
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Resposta</h2>
+			<h2>Sugestão:</h2>
 			<?php
 				if ($_SERVER["REQUEST_METHOD"] == "POST") {
 

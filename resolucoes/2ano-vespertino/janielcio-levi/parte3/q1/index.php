@@ -1,9 +1,9 @@
 <?php
 	$num = $_POST["num"] ?? 0;
+	$fatorial = 1;
+	$saida = "";
+	$numin = $num;
 	if($num != 0){
-		$fatorial = 1;
-		$saida = "";
-		$numin = $num;
 		for($num; $num>=1;$num--){
 			$nums = (string)$num;
 			if ($num > 1) {
@@ -30,25 +30,27 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Calculo de fatorial</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
+			<h2>Realize o Calculo</h2>
 			<form action="index.php" method="post">
 				<label>Insira um numero:
 					<input type="number" id="num" name="num" required>
 				</label>
-				<button name="enviar"> Enviar </button>
+				<button name="enviar"> Calculo </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Resposta</h2>
+			<h2>Resposta:</h2>
 			<?php
-				if($_SERVER["REQUEST_METHOD"]=="POST" && $p == 1){
-					echo "<h3>O fatorial de {$numin} é {$fatorial} <br>O calculo realizado foi: <br>{$saida}</h3>";
-				}else{
-					echo "<h3>O fatorial de {$numin} é 1";
+				if($_SERVER["REQUEST_METHOD"]=="POST"){
+					if($p == 1){
+						echo "<h3>O fatorial de {$numin} é {$fatorial} <br>O calculo realizado foi: <br>{$saida}</h3>";
+					}else{
+						echo "<h3>O fatorial de {$numin} é 1";
+					}
 				}
 			?>
 		</div>

@@ -11,11 +11,11 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Padrão de Asteristicos</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
+			<h2>Qual o tamanho do padrão?</h2>
 			<form action="index.php" method="post">
 				<label>Insira o valor de linhas:
 					<input type="number" id="num" name="num" min="1" required>

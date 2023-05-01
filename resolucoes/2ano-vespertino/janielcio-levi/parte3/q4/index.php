@@ -15,16 +15,16 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Soma Sequencial</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form action="questao4.php" method="post">
+			<h2>Soma sequecial de N</h2>
+			<form action="index.php" method="post">
 				<label>Insira o valor de N:
 					<input type="number" id="num" name="num" min="1" required>
 				</label>
-				<button name="enviar"> Enviar </button>
+				<button name="enviar"> Calcular </button>
 			</form>
 		</div>
 		<div class="box resposta">

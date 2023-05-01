@@ -29,11 +29,11 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Jogo "Impar ou Par"</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
+			<h2>Se prepare para a Batalha:</h2>
 			<form action="index.php" method="post">
 				<label>Insira um numero:
 					<input type="number" id="numero" name="num" max="10" min="0" required>
@@ -60,7 +60,6 @@
 					
 				}
 			?>
-			<a href="questao5.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>

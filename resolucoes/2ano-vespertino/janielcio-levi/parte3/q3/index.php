@@ -18,11 +18,11 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Tem quantos Numero Pares?</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
+			<h2>Qual intevalo verificar?</h2>
 			<form action="index.php" method="post">
 				<label>Insira o inicio do intervalo:
 					<input type="number" id="numin" name="numin" required>

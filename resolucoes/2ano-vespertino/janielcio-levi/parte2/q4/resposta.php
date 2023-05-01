@@ -17,19 +17,19 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Baskhara</h1>
 	</header>
 	<div class="container">
 		<div class="box resposta">
-			<h2>Resposta</h2>
+			<h2>Resposta:</h2>
 			<?php
 
 				if ($del < 0) {
-					echo "<p>A equação não possui raizes reais</p>";
+					echo "<p class='alerta-vermelho'>A equação não possui raizes reais</p>";
 				}elseif ($del == 0) {
-					echo "<p>A equação possui apenas uma raiz real <br> A raiz é : X = {$x1}</p>";
+					echo "<p class='alerta-amarelo'>A equação possui apenas uma raiz real <br> A raiz é : X = {$x1}</p>";
 				}elseif ($del > 0) {
-					echo "<p>A equação possui 2 raizes reais, são elas:<br> X' = {$x1} <br> X'' = {$x2}</p>";
+					echo "<p class='alerta-verde'>A equação possui 2 raizes reais, são elas:<br> X' = {$x1} <br> X'' = {$x2}</p>";
 				}
 			
 			?>
