@@ -1,78 +1,63 @@
+<?php
+	$num1 = $_GET["num1"] ?? 0;
+	$pi = $_GET["pi"] ?? "par";
+
+	$num2 = rand(0,10);
+
+	$soma = $num1 + $num2;
+
+	if($soma % 2 == 0){
+		$pn = "par";
+	}else{
+		$pn = "ímpar";
+	}
+
+	if(($soma % 2 == 0 && $pi == "par") || ($soma % 2 != 0 && $pi == "ímpar")){
+		$mensagem = "{$soma} é $pn e o usuário venceu!";
+		$alerta = "alerta-verde";
+	}else{
+		$mensagem = "{$soma} é $pn e o computador venceu!";
+		$alerta = "alerta-vermelho";
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Formulário</title>
+	<title>Questão 5</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1>Par ou Ímpar</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
+			<h2>Jogar</h2>
+			<br>
+			<form action="index.php" method="get">
+				<label>Insira um número de 1 a 10:
+					<input type="number" id="nome" name="num1" min=1 max=10 required>
 				</label>
 
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
-
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
+				<label>Paridade:
+				<br>
+				<input type=radio name=pi value="par">Par
+				<br>
+				<input type=radio name=pi value="ímpar">Ímpar
+				<br><br>
 				</label>
 
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<h2>Resultado</h2>
+			<br>
+			<p><?="O usuário escolheu $pi e o número {$num1}. O computador sorteou o número {$num2}, e a soma deles é {$soma}."?></p>
+			<p class="<?=$alerta?>"><?=$mensagem?></p>
 		</div>
 	</div>
 </body>
