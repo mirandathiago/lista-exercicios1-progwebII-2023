@@ -2,7 +2,6 @@
 
 $sabores = $_GET["sabores"] ?? "";
 
-
 ?>
 
 <!DOCTYPE html>
@@ -25,19 +24,19 @@ $sabores = $_GET["sabores"] ?? "";
 			   <fieldset>
 				<legend>Selecione os sabores da pizza:</legend>
 				<div>
-				  <input type="checkbox" id="frango" name="sabores" value="frango">
+				  <input type="checkbox" id="frango" name="sabores[]" value="frango">
 				  <label for="frango">Frango</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="portuguesa" name="sabores" value="portuguesa">
+				  <input type="checkbox" id="portuguesa" name="sabores[]" value="portuguesa">
 				  <label for="portuguesa">Portuguesa</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="carneseca" name="sabores" value="carneseca">
+				  <input type="checkbox" id="carneseca" name="sabores[]" value="carneseca">
 				  <label for="carneseca">Carne Seca</label>
 				</div>
 				<div>
-				  <input type="checkbox" id="pepperoni" name="sabores" value="pepperoni">
+				  <input type="checkbox" id="pepperoni" name="sabores[]" value="pepperoni">
 				  <label for="pepperoni">Pepperoni</label>
               
 				</div>
@@ -48,6 +47,20 @@ $sabores = $_GET["sabores"] ?? "";
 		</div>
 		<div class="box resposta">
 			<h2>Resposta</h2>
+
+			<?php
+			if(isset($_GET["enviar"])){
+
+                if (!empty($sabores)) {
+				foreach($sabores as $sabor){
+					echo "<li> {$sabor} </li>";
+				}
+			}else{
+				echo "Não há sabores selecionados";
+			}
+		}
+
+			?>
 			
 		</div>
 	</div>
