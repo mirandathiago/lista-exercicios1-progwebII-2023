@@ -1,27 +1,60 @@
-<!--  Seu João quer saber quanto vai ser a sua conta de energia no mês apenas olhando para o medidor de energia de sua residência. 
-Para ajudá-lo crie um formulário que receba o consumo de energia elétrica em kW/h (quilowatts-hora). Em seguida, crie um código em PHP que
- calcule o valor da conta de energia com base nas seguintes regras:
-Até 100 kWh, o valor é de R$ 0,50 por kW/h.
-De 101 a 200 kWh, o valor é de R$ 0,70 por kW/h.
-Acima de 200 kWh, o valor é de R$ 0,87 por kW/h.
-Além disso, a conta de energia possui uma taxa mínima de R$ 20,00. Portanto, caso o valor calculado seja inferior a R$ 20,00, 
-o valor a ser cobrado deve ser de R$ 20,00.
- -->
- <!DOCTYPE html>
+<!-- 1- Escreva um formulário que tenha um campo do tipo checkbox que permita que sejam marcadas as frutas favoritas de um usuário. (Devem existir ao menos 5 frutas para serem escolhidas). Em seguida processe a informação deste formulário utilizando o comando For Each para apresentar as frutas que foram escolhidas. 
+-->
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>Formulário de Idade</title>
-	<meta charset="utf-8">
-    <link href="estilo.css" rel="stylesheet" >
+	<meta charset="UTF-8">
+	<title>Formulário</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-    <h1>CONSUMO DE ENERGIA</h1>
-		<form action="receber1.php" method="POST">
-			<label>Insira o consumo de energia (kw/h):
-			  <input type="number" name="energia" required>
-    	  </label>
-			<button>Enviar</button>
-		</form>
+	<header>
+		<h1>Frutas Preferidas</h1>
+	</header>
+	<div class="container">
+		<div class="box formulario">
+			
+			<form action="index.php" method="POST">
+			  <fieldset>
+				<legend>Selecione suas frutas favoritas:</legend>
+				<div>
+				  <input type="checkbox" id="banana" name="frutas[]" value="banana"> 
+				  <label for="banana">Banana</label>
+				</div>
+				<div>
+				  <input type="checkbox" id="morango" name="frutas[]" value="morango">
+				  <label for="morango">Morango</label>
+				</div>
+				<div>
+				  <input type="checkbox" id="uva" name="frutas[]" value="uva">
+				  <label for="uva">Uva</label>
+				</div>
+				<div>
+				  <input type="checkbox" id="abacaxi" name="frutas[]" value="abacaxi">
+				  <label for="abacaxi">Abacaxi</label>
+				</div>
+				<div>
+				  <input type="checkbox" id="laranja" name="frutas[]" value="laranja">
+				  <label for="laranja">Laranja</label>
+				</div>
+			  </fieldset>
+				
+				<button name="enviar"> Enviar </button>
+			</form>
+		</div>
+		<div class="box resposta">
+			<h2>Resposta</h2>
+            <?php
+    
+                $frutas = $_POST["frutas"] ?? []; // para receber todas as frutas
+
+                foreach($frutas as $frutas){
+                    echo "<h3>{$frutas}</h3>";
+                }
+            ?>
+			
+		</div>
 	</div>
 </body>
 </html>

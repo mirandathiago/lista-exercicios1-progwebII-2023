@@ -1,27 +1,33 @@
-<!--  Seu João quer saber quanto vai ser a sua conta de energia no mês apenas olhando para o medidor de energia de sua residência. 
-Para ajudá-lo crie um formulário que receba o consumo de energia elétrica em kW/h (quilowatts-hora). Em seguida, crie um código em PHP que
- calcule o valor da conta de energia com base nas seguintes regras:
-Até 100 kWh, o valor é de R$ 0,50 por kW/h.
-De 101 a 200 kWh, o valor é de R$ 0,70 por kW/h.
-Acima de 200 kWh, o valor é de R$ 0,87 por kW/h.
-Além disso, a conta de energia possui uma taxa mínima de R$ 20,00. Portanto, caso o valor calculado seja inferior a R$ 20,00, 
-o valor a ser cobrado deve ser de R$ 20,00.
+<!--Pedro está endividado e precisa saber em quanto tempo conseguirá quitar sua dívida. Ele sabe o valor da dívida, a taxa de juros mensal e quanto consegue pagar mensalmente. Crie um formulário que receba o valor de uma dívida, a taxa de juros mensal e o valor mensal a ser pago. Com base nesses dados, calcule em quantos meses a dívida será paga e apresente o resultado ao usuário utilizando o comando WHILE.
  -->
  <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-	<title>Formulário de Idade</title>
-	<meta charset="utf-8">
-    <link href="estilo.css" rel="stylesheet" >
+	<meta charset="UTF-8">
+	<title>Formulário</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-    <h1>CONSUMO DE ENERGIA</h1>
-		<form action="receber1.php" method="POST">
-			<label>Insira o consumo de energia (kw/h):
-			  <input type="number" name="energia" required>
-    	  </label>
-			<button>Enviar</button>
-		</form>
+	<div class="container">
+		<div class="box resposta">
+			<h2> Dívida</h2>
+            <form action = "receber1.php" method = "POST">
+                <label> Insira seu nome:
+                    <input type = "text" name = "nome">
+                </label>
+                <label> Insira o valor da dívida:
+                    <input type = "number" name = "divida">
+                </label>
+                <label> Insira o valor da taxa:
+                    <input type = "number" name = "taxa" step = "0.01">
+                </label>
+                <label> Insira o valor mensal a ser pago:
+                    <input type = "number" name = "valorMensal">
+                </label>
+                <button> ENVIAR </button>
+            </form>
+		</div>
 	</div>
 </body>
 </html>

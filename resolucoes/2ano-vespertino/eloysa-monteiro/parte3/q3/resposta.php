@@ -1,24 +1,27 @@
+<?php
+    $value1 = $_POST["value1"] ?? 0;
+    $value2 = $_POST["value2"] ?? 0;
+    $acumulador = 0;
+ 
+?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-	<meta charset="UTF-8">
-	<title>Formulário</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<title>Formulário de Idade</title>
+	<meta charset="utf-8">
+    <link href="estilo1.css" rel="stylesheet" >
 </head>
 <body>
-	<header>
-		<h1>Formulário de Contato</h1>
-	</header>
-	<div class="container">
-		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
-		</div>
+    <div class = "box">
+    <?php
+       for($i = $value1; $i < $value2; $i++){
+    
+        if($i % 2 == 0){
+            $acumulador++;
+        }  
+    }
+        echo "O intervalo de {$value1} á {$value2} é $acumulador";
+    ?>
 	</div>
 </body>
 </html>

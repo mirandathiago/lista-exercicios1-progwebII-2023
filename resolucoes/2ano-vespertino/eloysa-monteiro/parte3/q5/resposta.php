@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<!--Pedro está endividado e precisa saber em quanto tempo conseguirá quitar sua dívida. Ele sabe o valor da dívida, a taxa de juros mensal e quanto consegue pagar mensalmente. Crie um formulário que receba o valor de uma dívida, a taxa de juros mensal e o valor mensal a ser pago. Com base nesses dados, calcule em quantos meses a dívida será paga e apresente o resultado ao usuário utilizando o comando WHILE.
+ -->
+ <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -7,17 +9,32 @@
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-	<header>
-		<h1>Formulário de Contato</h1>
-	</header>
 	<div class="container">
 		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<?php
+
+				$nome = $_POST["nome"];
+				$divida = $_POST["divida"] ?? 0;
+				$taxaJuros = $_POST["taxa"] ?? 0;
+				$valorMensal = $_POST["valorMensal"] ?? 0;
+				$qtdmeses = 0;
+
+				$taxaJuros = $taxaJuros/100;
+
+				while($divida >= 0){
+					$divida = $divida - $valorMensal;
+					$divida = $divida + ($divida * $taxaJuros);
+
+					$qtdmeses++;
+				}
+
+				//var_dump($divida);
+				//var_dump($valorMensal);
+
+				echo "<p class = 'alerta-verde'>{$nome}, a quantidade de meses que você demorará para pagar é {$qtdmeses} meses </p>";
+
+
+            ?>
 		</div>
 	</div>
 </body>

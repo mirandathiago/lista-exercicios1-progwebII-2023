@@ -1,24 +1,41 @@
+<?php
+    $energia = $_POST["energia"] ?? 0;
+?>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-	<meta charset="UTF-8">
-	<title>Formulário</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<title>Formulário de Idade</title>
+	<meta charset="utf-8">
+    <link href="estilo.css" rel="stylesheet" >
 </head>
 <body>
-	<header>
-		<h1>Formulário de Contato</h1>
-	</header>
-	<div class="container">
-		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
-		</div>
-	</div>
+    <h1>CONSUMO DE ENERGIA</h1>
+	<?php
+        if($energia <= 100){
+
+            $c = ($energia * 0.50) + 20;
+            //echo $c;
+            echo "<p> O valor da energia será R$ {$c} </p>";
+
+        }
+        else if($energia >=101 && $energia <= 200 ){
+
+           $c = ($energia * 0.70) + 20;
+          //  echo $c;
+         echo "<p class='alerta-verde'> O valor da energia será R$ {$c}</p>";
+
+        }
+        else if($energia > 200){
+
+            $c = ($energia * 0.87) + 20;
+           // echo $c;
+            echo "<p class='alerta-verde'> O valor da energia será R$ s{$c}</p>";
+
+        }
+        else
+        {
+            echo "<p class='alerta-verde'> O valor da energia será R$20,00</P";
+        }
+    ?>
 </body>
 </html>

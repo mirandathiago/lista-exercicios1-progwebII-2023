@@ -4,31 +4,31 @@
     padding:0;
 }
 body {
-	background: linear-gradient(to bottom, #fdbdf3, #f957e0);
+	background: linear-gradient(to bottom, #4ae6b5, #4a90e2);
 	font-family: 'Open Sans', sans-serif;
     min-height:100vh;
 }
 
 h1 {
-	color: #ffffff;
+	color: #1efbf7;
     text-shadow: 0px 2px 2px #333;
     text-align: center;
 }
 
 h2 {
-	color: #ffffff;
+	color: #3399ff;
 }
 
 h3 {
-	color: snow;
+	color: #33cccc;
 }
 
 h4 {
-	color: snow;
+	color: #99ffcc;
 }
 
 h5 {
-	color: snow;
+	color: #ffff99;
 }
 
 p, label, input, textarea, select {
@@ -90,7 +90,7 @@ select {
 }
 
 button {
-	background-color: #7e025f;
+	background-color: #4a90e2;
 	color: #ffffff;
 	border: none;
 	padding: 10px;
@@ -101,7 +101,7 @@ button {
 }
 
 .link {
-	background-color: #f052d5;
+	background-color: #4ae6b5;
 	color: #ffffff;
 	border: none;
 	padding: 10px;
@@ -171,4 +171,6 @@ label {
     margin:10px auto;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
+ 
+ 
   

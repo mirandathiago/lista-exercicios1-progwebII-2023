@@ -1,27 +1,70 @@
-<!--  Seu João quer saber quanto vai ser a sua conta de energia no mês apenas olhando para o medidor de energia de sua residência. 
-Para ajudá-lo crie um formulário que receba o consumo de energia elétrica em kW/h (quilowatts-hora). Em seguida, crie um código em PHP que
- calcule o valor da conta de energia com base nas seguintes regras:
-Até 100 kWh, o valor é de R$ 0,50 por kW/h.
-De 101 a 200 kWh, o valor é de R$ 0,70 por kW/h.
-Acima de 200 kWh, o valor é de R$ 0,87 por kW/h.
-Além disso, a conta de energia possui uma taxa mínima de R$ 20,00. Portanto, caso o valor calculado seja inferior a R$ 20,00, 
-o valor a ser cobrado deve ser de R$ 20,00.
- -->
- <!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html>
 <head>
-	<title>Formulário de Idade</title>
-	<meta charset="utf-8">
-    <link href="estilo.css" rel="stylesheet" >
+	<meta charset="UTF-8">
+	<title>Formulário</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-    <h1>CONSUMO DE ENERGIA</h1>
-		<form action="receber1.php" method="POST">
-			<label>Insira o consumo de energia (kw/h):
-			  <input type="number" name="energia" required>
-    	  </label>
-			<button>Enviar</button>
-		</form>
-	</div>
+	<header>
+		<h1> PIZZARIA MONTEIRO</h1>
+	</header>
+	<div class="container">
+		<div class="box resposta">
+			<form action="index.php" method="POST">
+			  <fieldset>
+				<legend>Selecione o sabor da sua pizza:</legend>
+				<div>
+				  <input type="checkbox" id="Mussarela" name="pizza[]" value="Mussarela"> 
+				  <label for="Mussarela">Mussarela</label>
+				</div>
+				<div>
+				  <input type="checkbox" id="Calabresa" name="pizza[]" value="Calabresa">
+				  <label for="Calabresa">Calabresa</label>
+				</div>
+				<div>
+				  <input type="checkbox" id="Frango com catupiry" name="pizza[]" value="Frango com catupiry">
+				  <label for="Frango com catupiry">Frango com catupiry</label>
+				</div>
+				<div>
+				  <input type="checkbox" id="Portuguesa" name="pizza[]" value="Portuguesa">
+				  <label for="Portuguesa">Portuguesa</label>
+				</div>
+				<div>
+				  <input type="checkbox" id="Pepperoni" name="pizza[]" value="Pepperoni">
+				  <label for="Pepperoni">Pepperoni</label>
+				</div>
+                <div>
+                    <input type = "checkbox" id = "Carne seca" name = "pizza[]" value = "Carne seca">
+                    <label for = "Carne Seca" > Carne Seca</label>
+                </div>
+                <div>
+                    <input type = "checkbox" id = "Quatro queijos" name = "pizza[]" value = "Quatro queijos">
+                    <label for = "Quatro queijps"> Quatro queijos </label>
+                </div>
+			  </fieldset>
+				
+				<button name="enviar"> Enviar </button>
+			</form>
+
+            <div class = "box resposta">
+            <?php
+
+                $metodo = $_SERVER["REQUEST_METHOD"];
+
+                if($metodo == "POST"){
+
+                $pizza = $_POST["pizza"] ?? [];
+
+                echo "<p class = 'alerta-verde'> Pizzas escolhidas! Aguarde o motoboy </p>";
+                
+                foreach($pizza as $pizza){
+                    echo "<p> {$pizza} </p>";
+                }
+                
+            }
+            ?>
+            </div>
 </body>
 </html>

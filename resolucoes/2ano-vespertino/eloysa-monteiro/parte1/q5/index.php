@@ -1,71 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Formulário</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
-</head>
-<body>
-	<header>
-		<h1>Formulário de Contato</h1>
-	</header>
-	<div class="container">
-		<div class="box formulario">
-			<h2>Entre em contato</h2>
-			<form>
-				<label>Nome:
-					<input type="text" id="nome" name="nome" required>
-				</label>
+<!-- Um atleta de corrida de rua está treinando para uma maratona. Ele correu 10 km em 45 minutos no primeiro dia e quer aumentar sua velocidade para conseguir completar a maratona em menos de 4 horas. Crie um formulário que receba a distância que ele quer percorrer e o tempo que ele quer completar a prova e calcule a velocidade média que ele precisa atingir em km/h usando PHP. 
+ -->
+ <!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>JESUS FREAK</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+      <div id="corrida">
+        <h1> VELOCIDADE MÉDIA </h1>
+          <form action="receber1.php" method="POST" >
+              <label> DISTÂNCIA PERCORRIDA:
+                <input type="number" name="distancia"  requered>
+              </label>
 
-				<label>E-mail:
-					<input type="email" id="email" name="email" required>
-				</label>
+              <label> TEMPO:
+                <input type="number" name="tempo"  requered>
+              </label>
+              <button> ENVIAR </button>
 
-				<label>Telefone:
-					<input type="tel" id="telefone" name="telefone" required>
-				</label>
-
-				<label>Assunto:
-					<select name="assunto">
-						<option></option>
-						<option value="1">Nota</option>
-						<option value="2">Trabalho</option>
-						<option value="3">Feriado</option>
-					</select>
-			   </label>
-
-			   <fieldset>
-				<legend>Selecione suas frutas favoritas:</legend>
-				<div>
-				  <input type="checkbox" id="banana" name="frutas" value="banana">
-				  <label for="banana">Banana</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="morango" name="frutas" value="morango">
-				  <label for="morango">Morango</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="uva" name="frutas" value="uva">
-				  <label for="uva">Uva</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="abacaxi" name="frutas" value="abacaxi">
-				  <label for="abacaxi">Abacaxi</label>
-				</div>
-				<div>
-				  <input type="checkbox" id="laranja" name="frutas" value="laranja">
-				  <label for="laranja">Laranja</label>
-				</div>
-			  </fieldset>
-
-				<label>Mensagem:
-					<textarea id="mensagem" name="mensagem" required></textarea>
-				</label>
-
-				<button name="enviar"> Enviar </button>
-			</form>
-		</div>		
-	</div>
-</body>
+          </form>
+      </div>       
+  </body>  
 </html>

@@ -4,31 +4,31 @@
     padding:0;
 }
 body {
-	background: linear-gradient(to bottom, #4ae6b5, #4a90e2);
+	background: linear-gradient(to bottom, #fdbdf3, #f957e0);
 	font-family: 'Open Sans', sans-serif;
     min-height:100vh;
 }
 
-h1 {
+.valores {
 	color: #ffffff;
     text-shadow: 0px 2px 2px #333;
     text-align: center;
 }
 
 h2 {
-	color: #3399ff;
+	color: #ffffff;
 }
 
 h3 {
-	color: #33cccc;
+	color: snow;
 }
 
 h4 {
-	color: #99ffcc;
+	color: snow;
 }
 
 h5 {
-	color: #ffff99;
+	color: snow;
 }
 
 p, label, input, textarea, select {
@@ -90,7 +90,7 @@ select {
 }
 
 button {
-	background-color: #4a90e2;
+	background-color: #7e025f;
 	color: #ffffff;
 	border: none;
 	padding: 10px;
@@ -101,7 +101,7 @@ button {
 }
 
 .link {
-	background-color: #4ae6b5;
+	background-color: #f052d5;
 	color: #ffffff;
 	border: none;
 	padding: 10px;
@@ -134,41 +134,5 @@ legend {
 input[type="checkbox"],
 input[type="radio"] {
 	margin-right: 10px;
-}
-
-label {
-	font-size: 14px;
-	font-family: 'Open Sans', sans-serif;
-	color: #333333;
-    
-}
-
-.alerta-vermelho {
-    background-color: #f44336;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    margin:10px auto;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-}
- 
-  
-  .alerta-verde {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    margin:10px auto;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-}
-  
-  
-  .alerta-amarelo {
-    background-color: #FFC107;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-    margin:10px auto;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
   

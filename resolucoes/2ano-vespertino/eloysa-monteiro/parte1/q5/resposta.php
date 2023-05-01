@@ -1,24 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Formulário</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
-</head>
-<body>
-	<header>
-		<h1>Formulário de Contato</h1>
-	</header>
-	<div class="container">
-		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
-		</div>
-	</div>
-</body>
+<?php
+    $distancia = $_POST["distancia"] ?? 0;
+    $tempo = $_POST["tempo"] ?? 0;
+
+?>
+ <!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>JESUS FREAK</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
+  </head>
+  <body>
+      <div id="corrida">
+        <h1> VELOCIDADE MÉDIA </h1>
+          <form action="exemplo1.php" method="POST" >
+              <label> DISTÂNCIA PERCORRIDA:
+                <input type="number" name="distancia" value=<?=$distancia?> requered>
+              </label>
+
+              <label> TEMPO:
+                <input type="number" name="tempo" value="<?=$tempo?>" requered>
+              </label>
+              <button> ENVIAR </button>
+
+          </form>
+      </div>   
+      <div class="resposta">
+        <h2> RESPOSTA </h2>
+        <?php
+             $velocidadeMedia = $distancia / $tempo;
+
+             echo "<p> A velocidade média que ele precisará atingir com a distância de {$distancia}km e o tempo de {$tempo}h é {$velocidadeMedia}km/h</p>";
+        ?>
+      </div>
+    
+  </body>  
 </html>

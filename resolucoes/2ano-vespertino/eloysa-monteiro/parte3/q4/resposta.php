@@ -8,16 +8,21 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		<h1> CONTAGEM</h1>
 	</header>
 	<div class="container">
-		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+		<div class="box">
+        <?php
+            $valor = $_POST["valor"] ?? 0;
+			$soma = 0;
+
+            for($i = 1; $i <= $valor; $i++){
+                $soma = $soma + $i;
+            }      
+            echo "A soma de 1 até {$valor} é $soma";
+
+
+        ?>
 		</div>
 	</div>
 </body>
