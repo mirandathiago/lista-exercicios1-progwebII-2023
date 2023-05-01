@@ -51,10 +51,16 @@ $frutas = $_GET["frutas"] ?? "";
 			<h2>Resposta</h2>
 		<?php
 		
+		if(isset($_GET["enviar"])){
+		if (!empty($frutas)) {
 			foreach($frutas as $fruta){
-           echo "<li> {$fruta} </li>";
-		   }
-
+				echo "<li> {$fruta} </li>";
+			}
+		}else{
+			echo "Não há frutas selecionadas";
+		
+	}
+}
 ?>
 
 		</div>
