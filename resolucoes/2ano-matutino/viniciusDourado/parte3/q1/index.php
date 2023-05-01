@@ -39,17 +39,15 @@ Saída: 6
        		$fatorial = 1;
 
         	echo "<p class='alerta-verde'>{$numero} != ";
-        do{
+        for($i = $numero; $i >= 1 ; $i--){
             if($numero != 1){
                 echo"{$numero} x";
             }else{
                 echo"{$numero}";
             }
-
             $fatorial= $fatorial * $numero;
             $numero = $numero -1;
-            
-        }while($numero >= 1);
+        }
        		echo" = {$fatorial}</p>";
 	}
 			?>
