@@ -18,7 +18,7 @@
 	<div class="container">
 		<div class="box resposta">
 			<h1>Média final do aluno</h1>
-			<p> A média final do aluno é <?=number_format($media,1)?></p>
+			<p> A média final do aluno é <?=number_format($media,2)?></p>
 			
             <a href="index.php" class="link">Voltar</a>
 		</div>
