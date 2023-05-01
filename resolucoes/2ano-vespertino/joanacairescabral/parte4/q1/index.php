@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2>Informe</h2>
-			<form>
+			<form action="index.php" method="post">
 			<fieldset>
                 <legend>Selecione suas frutas favoritas:</legend>
                 <div>
@@ -44,7 +44,7 @@
 		<div class="box resposta">
 			<h2>Resposta</h2>
 			<?php
-                $frutas =$_GET["frutas"] ?? [];
+                $frutas =$_POST["frutas"] ?? [];
 
                 foreach($frutas as $frutas){
                     echo "<h3>{$frutas}</h3>";
