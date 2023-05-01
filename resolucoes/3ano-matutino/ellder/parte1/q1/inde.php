@@ -1,10 +1,4 @@
 
-<?php
-    $dolar = $_POST["Dolar"] ?? 5.30;
-    $real = $_POST["Real"] ?? 0; 
-
-?>
-
 <?php 
 	$preco_original = $_POST['preco']?? 0;
 
@@ -23,27 +17,12 @@
 <body>
 	<header>
 
-		<h1>Operadores Aritimeticos</h1>
-	</header>
-	<div class="container">
-		<div class="box formulario">
-			<h2>Insira um valor em real para a conversão</h2>
-			<form  action="index.php" method="post">
-				
-				<label>Dolar:
-					<input type="number" name="Dolar" required value= "<?=$dolar?>">
-				</label>
-				<label>Real:
-					<input type="number" name="Real" required value= "<?=$real?>">
-				</label>
-								
-
 		<h1>Estruturas Condicionais</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
 			<h2>Insira um valor</h2> <br>
-			<form  action="index.php" method="post">
+			<form  action="inde.php" method="post">
 				
 				<label>Preço Original:
 					<input type="number" name="preco" required value= "<?=$preco_original?>">
@@ -55,19 +34,6 @@
 			</form>
 		</div>
 		<div class="box resposta">
-
-			<h2> CONVERSÃO </h2>
-           
-           <?php  
-		   
-         if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-            $soma =  $real / $dolar;
-            echo "<p> A converção do real para o dolar é : " .number_format($soma, 2 ,"." )."</p>";
-            
-        } 
-    
-    ?>
 
 			<h2> Preço do produto com desconto </h2>
             <?php 
