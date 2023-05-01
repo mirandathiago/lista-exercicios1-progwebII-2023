@@ -36,7 +36,7 @@
 		<div class="box resposta">
 			<h2>Resposta</h2>
 			<p>Seu IMC é <?=number_format($imc,1)?></p>
-			<p class="alerta-amarelo">Você está na faixa de<?=$situacao?></p>
+			<p class="alerta-amarelo">Você está na faixa de <?=$situacao?></p>
             <a href="index.php" class="link">Voltar</a>
 		</div>
 	</div>
