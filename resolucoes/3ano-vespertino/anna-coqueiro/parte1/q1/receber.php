@@ -1,3 +1,8 @@
+<?php
+		$valor=$_GET["valor"];
+		$desconto = $valor - ($valor*10/100);
+	?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,18 +12,14 @@
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-	<header>
-		<h1>Formulário de Contato</h1>
-	</header>
-	<div class="container">
+<div class="container">
 		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<h2>Desconto de 10%</h2>
+			<?="O produto que custa {$valor} reais, com o desconto ficou {$desconto} reais." ?>
+			<br>
+            <a href="index.php" class="link">Voltar</a>
 		</div>
-	</div>
+</div>
+
 </body>
 </html>
