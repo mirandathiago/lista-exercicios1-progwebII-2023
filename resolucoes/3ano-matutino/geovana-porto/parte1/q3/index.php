@@ -57,8 +57,12 @@ $mediafinal = ($nota1 + $nota2 + $nota3) / 10;
 			<h2>Resposta</h2>
 			<hr>
 			<br>
-			<h3> Media final: <?= $mediafinal ?> </h3>
 
+			<?php
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+			echo "Media final: $mediafinal";
+			}
+			?>
 		</div>
 	</div>
 </body>
