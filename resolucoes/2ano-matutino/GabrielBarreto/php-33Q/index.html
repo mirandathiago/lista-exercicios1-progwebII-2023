@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto com um desconto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div id="container">
+            <h1>IFBA-Instituto Federal de Ciência e Tecnologia da Bahia</h1>
+            <h1>33 Exercícios com PHP</h1><br>
+            
+            <h2><a href="https://github.com/GabrielxBarreto">Aluno:Gabriel de Carvalho Barreto</a></h2>
+            <h2>Professor: Thiago Miranda | Programação Web II</h2><br>
+            <h2 id="titulosort">Lista De Questões:</h2>
+            <br>
+            <section>
+                
+                <ul id="Mundo1">
+                    <h4>Parte 1</h4>
+                    <a href="Parte 1/Questão1/index.php"><li>Qustão 1</li></a>
+                    <a href="Parte 1/Questão2/index.php"><li>Qustão 2</li></a>
+                    
+                </ul>
+                <ul id="Mundo2">
+                    <h4>Parte 2</h4>
+                    <a href="Parte2/Questão11/index.php"><li>Qustão 11</li></a>
+                    <a href="Parte2/Questão12/index.php"><li>Qustão 12</li></a>
+                    <a href="Parte2/Questão14/index.php"><li>Qustão 14</li></a>
+                    <a href="Parte2/Questão15/index.php"><li>Qustão 15</li></a>
+                    
+                </ul>
+                <ul id="Mundo3">
+                    <h4>Parte 3</h4>
+                    
+                    <a href="Parte3/Questão21/index.php"><li>Qustão 21</li></a>
+                    <a href="Parte3/Questão22/index.php"><li>Qustão 22</li></a>
+                    <a href="Parte3/Questão23/index.php"><li>Qustão 23</li></a>
+                    <a href="Parte3/Questão24/index.php"><li>Qustão 24</li></a>
+                </ul>
+                <ul id="Mundo4">
+                    <h4>Parte 4</h4>
+                    <a href="Parte4/Questão31/index.php"><li>Qustão 31</li></a>
+                    <a href="Parte4/Questão32/index.php"><li>Qustão 32</li></a>
+                </ul>
+
+
+            </section>
+            <br>
+            <h2 id="titulosort">Quais Questões foram enviadas?</h2>
+            <div id = "Sorteio-De_Questões">
+                
+                    <input  id = "1"class="campo-de-texto" type="number" placeholder="Número da questão..."required step="1" max ="33" min="1">
+                    <input  id = "2"class="campo-de-texto" type="number" placeholder="Número da questão..."required step="1" max="33" min="1">
+                    <input  id = "3"class="campo-de-texto" type="number" placeholder="Número da questão..."required step="1" max="33" min="1">
+                    <input  id = "4"class="campo-de-texto" type="number" placeholder="Número da questão..."required step="1" max="33" min="1">
+                    <input  id = "5"class="campo-de-texto" type="number" placeholder="Número da questão..."required step="1" max="33" min="1">
+                    <input  id = "6"class="campo-de-texto" type="number" placeholder="Número da questão..."required step="1" max="33" min="1">
+                    <input  id = "7"class="campo-de-texto" type="number" placeholder="Número da questão..."required step="1" max="33" min="1">
+                    <input  id = "8"class="campo-de-texto" type="number" placeholder="Número da questão..."required step="1" max="33" min="1">
+                    <input  id = "9"class="campo-de-texto" type="number" placeholder="Número da questão..."required step="1" max="33" min="1">
+                    <input  id = "10"class="campo-de-texto" type="number" placeholder="Número da questão..."required step="1" max="33" min="1">
+                    <input  id = "11"class="campo-de-texto" type="number" placeholder="Número da questão..."required step="1" max="33" min="1">
+                    <input  id = "12"class="campo-de-texto" type="number" placeholder="Número da questão..."required step="1" max="33" min="1">
+                
+                
+                
+            </div>
+            <br>
+            <button onclick = "sortear()"id= "btn-sorte">Sortear Questão</button>
+            <div id="resultado">
+            </div>
+        </div>
+        
+    </main>
+    <script>
+        function sortear(){
+
+
+        let resultado = document.getElementById("resultado");
+        let _Q1 = document.getElementById("1").value;
+        let _Q2 = document.getElementById("2").value;
+        let _Q3 = document.getElementById("3").value;
+        let _Q4 = document.getElementById("4").value;
+        let _Q5 = document.getElementById("5").value;
+        let _Q6 = document.getElementById("6").value;
+        let _Q7 = document.getElementById("7").value;
+        let _Q8 = document.getElementById("8").value;
+        let _Q9 = document.getElementById("9").value;
+        let _Q10 = document.getElementById("10").value;
+        let _Q11 = document.getElementById("11").value;
+        let _Q12 = document.getElementById("12").value;
+
+        let arrQuestoes = [_Q1,_Q2,_Q3,_Q4,_Q5,_Q6,_Q7,_Q8,_Q9,_Q10,_Q11,_Q12];
+        randIndice = parseInt(Math.random()*12);
+
+       
+        resultado.innerHTML = "<br>Questão sorteada foi: "+arrQuestoes[randIndice];
+        let questaotxt = document.getElementsByTagName("input")[randIndice];
+        let questao = document.getElementsByTagName("a")[arrQuestoes[randIndice]];
+        console.log(typeof(_Q1));
+        questaotxt.style.backgroundColor ="rgb(25, 0, 255) ";
+        questaotxt.style.color ="#fff";
+        console.log(questao);
+
+
+        }
+        
+
+
+    </script>
+</body>
+
+</html>
