@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: #d6c7ff;
+}
+.container{
+    flex-direction: column;
+    height: 90vh;
+    width: 98vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+input{
+    padding: 3px;
+    font-size: 1rem;
+}
+h1{
+    text-align: center;
+    margin:10px;
+}
+h5{
+    color:#767676;
+    margin: 10px;
+}
+.resposta{
+    width: 400px;
+    height: 180px;
+    border: 1px solid #767676;
+    border-radius: 4px;
+    font-family: 'cursive', 'courier new', sans-serif;
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+}
