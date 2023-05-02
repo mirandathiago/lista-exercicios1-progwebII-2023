@@ -4,7 +4,7 @@
     padding:0;
 }
 body {
-	background: linear-gradient(to bottom, #4ae6b5, #4a90e2);
+	background: linear-gradient(to bottom, #64e64a, #081f3a);
 	font-family: 'Open Sans', sans-serif;
     min-height:100vh;
 }
@@ -171,4 +171,13 @@ label {
     margin:10px auto;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
 }
-  
+
+.item{
+  border:1px solid black;
+  border-radius:20px;
+  background-color:white;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  padding:10px;
+  margin:10px auto; 
+  display:flex;
+}
