@@ -26,28 +26,30 @@
 			<h2>Solução</h2>
 			<br>
 			<p class="alerta-verde">
+
 			<?php
-			$n = $_POST["n"] ?? 0;
-			$calc = 1;
+				$n = $_POST["n"] ?? 0;
+				$calc = 1;
 
-			echo "{$n}! = ";
+				echo "{$n}! = ";
 
-			if($n == 0){
-				echo "1";
-			}else{
-				for($i = $n; $i > 0; $i--){
-					if ($i == 1){
-						echo "{$i}";
-					}else{
-						echo "{$i} x ";
+				if($n == 0){
+					echo "1";
+				}else{
+					for($i = $n; $i > 0; $i--){
+						if ($i == 1){
+							echo "{$i}";
+						}else{
+							echo "{$i} x ";
+						}
+						
+						$calc *= $i;
 					}
-					
-					$calc *= $i;
 				}
-			}
 
-			echo " = {$calc}";
-		?>
+				echo " = {$calc}";
+			?>
+
 			</p>
 		</div>
 	</div>
