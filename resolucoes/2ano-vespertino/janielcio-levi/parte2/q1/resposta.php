@@ -31,14 +31,15 @@
 	if($num2 > $maior){
 		$maior = $num2;
 	}
-	else if($num3 > $maior){
+	if($num3 > $maior){
 		$maior = $num3;
 	}
 						//não deu certo mas depois deu
 	
 	if($num2 < $menor){
 		$menor = $num2;
-	}else if($num3 < $menor){
+	}
+	if($num3 < $menor){
 		$menor = $num3;
 	}
 
