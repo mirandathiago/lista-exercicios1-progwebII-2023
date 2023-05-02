@@ -20,7 +20,7 @@
         <br>
         <label>
             Altura:
-            <input type="number" name="altura" step="1.00" required>
+            <input type="number" name="altura" step="0.01" required>
         </label>
         
         <button>CALCULAR</button>

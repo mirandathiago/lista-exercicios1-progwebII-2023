@@ -35,7 +35,7 @@
             <?php
 
             if ($metodo == "POST"){
-                $numero = $_POST["numero"] ?: 0;
+                $numero = $_POST["numero"] ?? 0;
                 $metade = $numero / 2;
                 $dobro = $numero * 2;
                 echo "<h1>Resposta</h1>";

@@ -1,5 +1,5 @@
 <?php
-	$metodo = ($_SERVER["REQUEST_METHOD"]);
+	$metodo = $_SERVER["REQUEST_METHOD"];
 	$num1 = $_POST["num1"] ?? "";
 	$escolha = $_POST["escolha"] ?? "";
 ?>
@@ -25,8 +25,8 @@
 			<label>Escolha Par ou Ímpar:
 				<select name="escolha" required>
 					<option value="">Escolha...</option>
-					<option value="par"<?= $escolha == "par" ? "selected" : "" ?> >Par</option>
-					<option value="impar"<?= $escolha == "impar" ? "selected" : "" ?> >Ímpar</option>
+					<option value="par" <?= $escolha == "par" ? "selected" : "" ?> >Par</option>
+					<option value="impar" <?= $escolha == "impar" ? "selected" : "" ?> >Ímpar</option>
 				</select>
 			</label>
 			<button type="submit"> Jogar </button>

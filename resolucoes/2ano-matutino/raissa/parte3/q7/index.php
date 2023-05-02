@@ -62,7 +62,7 @@ while ($real > 0) {
 <body>
 <div class="container">
 		<div class="box resposta">
-		<form action="questao7.php"method="post">
+		<form action="index.php"method="post">
 
         <label>valor em real:
     <input type="number"  name="real" required>
@@ -70,6 +70,7 @@ while ($real > 0) {
     <button>Enviar</button>
     
     <?php
+    
 	echo "Valor lido: R$ " . $_POST['real'] . "<br>";
 	echo "Quantidade de notas de R$100: " . $nota100 . "<br>";
 	echo "Quantidade de notas de R$50: " . $nota50 . "<br>";

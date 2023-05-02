@@ -11,7 +11,7 @@
     </head>
     <body>  <div class="container">
 		<div class="box formulario">
-        <form action="q3.php" method="get">
+        <form action="index.php" method="get">
             <label>Informe o primeiro numero:
             <input type="number" name="num1">
             </label><br>

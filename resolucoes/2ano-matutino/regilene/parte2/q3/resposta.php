@@ -55,6 +55,7 @@
 		
 		date_default_timezone_set('America/Sao_Paulo');
 		$hora = date('H:i:s', time());
+		$nome = $_POST["nome"];
 
 		 if($hora >= date('05:00:00', time()) && $hora <= date('12:59:59', time())){
 
@@ -74,11 +75,8 @@
 
 		}
 
-		foreach($_POST as $horas){
-
-			echo " {$horas}";
-			
-		}
+		echo $nome;
+		
 		
 		?>
 

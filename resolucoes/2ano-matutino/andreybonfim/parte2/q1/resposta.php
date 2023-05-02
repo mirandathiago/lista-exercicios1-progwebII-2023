@@ -7,7 +7,7 @@
         $mensagem2 = "";
 
     //MAIOR
-if($num1 > $num2 && $num1 > $num2){
+if($num1 > $num2 && $num1 > $num3){
     $mensagem = "O número maior é {$num1}";
 }elseif($num2 > $num3){
     $mensagem = "O número maior é {$num2}";
