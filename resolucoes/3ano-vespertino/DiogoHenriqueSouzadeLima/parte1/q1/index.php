@@ -1,8 +1,11 @@
-1- Pedro precisa calcular o preço de um produto com um desconto de 10%. Crie um formulário que receba o preço original do produto e calcule o preço final com o desconto aplicado.
-Entrada: Preço original: R$ 50,00
-Saída: Preço com desconto: R$ 45,00
+
 
 <?php
+
+/*1- Pedro precisa calcular o preço de um produto com um desconto de 10%. Crie um formulário que receba o preço original do produto e calcule o preço final com o desconto aplicado.
+Entrada: Preço original: R$ 50,00
+Saída: Preço com desconto: R$ 45,00*/
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $precoOri = $_POST["precoOriginal"];
     $precoComDes = $precoOri - ($precoOri * 0.1);
