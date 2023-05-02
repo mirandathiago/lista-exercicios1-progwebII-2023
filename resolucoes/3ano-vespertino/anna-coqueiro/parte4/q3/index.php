@@ -32,9 +32,9 @@ if (isset($_POST["sabor"])) {
     </form>
         </div>
         <div class="box resposta">
-        <h2>Resultado:</h2>
-		<?php "<p>Esses foram os sabores de pizza escolhidos por você:</p>";
-		
+        <h2>Esses foram os sabores de pizza escolhidos por você:</h2>
+		<?php
+        
     	foreach ($sabor as $sabores) {
         echo "<li>$sabores</li>";
     }
