@@ -1,36 +1,41 @@
 <?php
-	$valor = $_GET["valor"] ?? 0;
-	$valor -= 0.1*$valor;
+	$num = $_POST["num"] ?? 0;
+
+	$dobro = $num*2;
+	$metade = $num/2;
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Questão 1</title>
+	<title>Questão 2</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 	<header>
-		<h1>Cálculo de Desconto</h1>
+		<h1>Calculadora Básica</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Desconto de 10%</h2>
-			<form action="index.php" method="get">
-				<label>Valor:
-					<input type="number" id="nome" name="valor" step="0.01" required>
+			<h2>Insira o número</h2>
+			<br>
+			<form action="index.php" method="post">
+				<label>Número:
+					<input type="number" id="nome" name="num" required>
 				</label>
 
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Valor Final</h2>
+			<h2>Resposta</h2>
 			<br>
-			<p><?="O valor final do seu produto com desconto de 10% é de "?></p>
-			<p class="alerta-verde"><?="R$",number_format($valor,2,",",".")?></p>
+			<p><?="Dobro: "?></p>
+			<p class="alerta-verde"><?=$dobro?></p>
+			<p><?="Metade: "?></p>
+			<p class="alerta-verde"><?=$metade?></p>
 		</div>
 	</div>
 </body>

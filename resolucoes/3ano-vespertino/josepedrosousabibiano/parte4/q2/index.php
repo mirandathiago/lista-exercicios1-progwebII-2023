@@ -1,36 +1,38 @@
 <?php
-	$valor = $_GET["valor"] ?? 0;
-	$valor -= 0.1*$valor;
+	$texto = $_GET["nomes"] ?? "";
+	$nomes = explode("\n", $texto);
+
+	$sort = rand(0, (count($nomes) - 1));
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Questão 1</title>
+	<title>Questão 2</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 	<header>
-		<h1>Cálculo de Desconto</h1>
+		<h1>Sorteador de Nomes</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Desconto de 10%</h2>
+			<h2>Sorteio</h2>
 			<form action="index.php" method="get">
-				<label>Valor:
-					<input type="number" id="nome" name="valor" step="0.01" required>
+				<label>Insira os nomes (por linha):
+					<textarea id="mensagem" name="nomes" required></textarea>
 				</label>
 
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Valor Final</h2>
+			<h2>Resultado</h2>
 			<br>
-			<p><?="O valor final do seu produto com desconto de 10% é de "?></p>
-			<p class="alerta-verde"><?="R$",number_format($valor,2,",",".")?></p>
+			<p>A pessoa sorteada foi... </p>
+			<p class="alerta-vermelho"><?=$nomes[$sort]?></p>
 		</div>
 	</div>
 </body>

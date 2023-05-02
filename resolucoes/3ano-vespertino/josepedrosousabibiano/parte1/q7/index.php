@@ -1,36 +1,38 @@
 <?php
-	$valor = $_GET["valor"] ?? 0;
-	$valor -= 0.1*$valor;
+	$tc = $_GET["tc"] ?? 0;
+
+	$tf = ($tc*(9/5)) + 32;
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Questão 1</title>
+	<title>Questão 7</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 	<header>
-		<h1>Cálculo de Desconto</h1>
+		<h1>Escalas Termométricas</h1>
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<h2>Desconto de 10%</h2>
+			<h2>Celsius para Fahrenheit</h2>
+			<br>
 			<form action="index.php" method="get">
-				<label>Valor:
-					<input type="number" id="nome" name="valor" step="0.01" required>
+				<label>Temperatura (em graus Celsius):
+					<input type="number" id="nome" name="tc" min="0" step="0.1" required>
 				</label>
 
 				<button name="enviar"> Enviar </button>
 			</form>
 		</div>
 		<div class="box resposta">
-			<h2>Valor Final</h2>
+			<h2>Resposta</h2>
 			<br>
-			<p><?="O valor final do seu produto com desconto de 10% é de "?></p>
-			<p class="alerta-verde"><?="R$",number_format($valor,2,",",".")?></p>
+			<p><?="A temperatura {$tc}°C equivale a"?></p>
+			<p class="alerta-verde"><?=$tf, "°F"?></p>
 		</div>
 	</div>
 </body>
