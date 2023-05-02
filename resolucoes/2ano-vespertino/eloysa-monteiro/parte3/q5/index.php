@@ -12,7 +12,7 @@
 	<div class="container">
 		<div class="box resposta">
 			<h2> Dívida</h2>
-            <form action = "receber1.php" method = "POST">
+            <form action = "resposta.php" method = "POST">
                 <label> Insira seu nome:
                     <input type = "text" name = "nome">
                 </label>

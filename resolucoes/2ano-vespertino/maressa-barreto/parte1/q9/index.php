@@ -48,9 +48,9 @@
 		?>
 		
 		<h3>O valor em real é R$<?=$num1?> </h3>
-		<h3>O valor do dolar é R$<?=$num2?> </h3>
+		<h3>O valor do dolar é $<?=$num2?> </h3>
 		<br>
-		<h3> O valor convertido é R$<?=$num3?>  </h3>
+		<h3> O valor convertido é $<?=$num3?>  </h3>
             
 		</div>
 	</div>

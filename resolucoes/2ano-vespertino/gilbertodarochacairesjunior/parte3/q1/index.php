@@ -16,7 +16,7 @@
 		<div class="box formulario">
 			<h2>Fatorial</h2>
 			<form action="index.php" method="post">
-				<label for="numero1">Numero Inicial</label>
+				<label for="numero">Numero Inicial</label>
 				<input type="number" name="numero">
 				<button> Enviar </button>
 			</form>
@@ -25,11 +25,11 @@
 			<?php if ($_SERVER["REQUEST_METHOD"] == "POST") { ?>
 				<p class="alerta-verde">
 					<?php
-					if ($_POST['numero1'] == 0) {
+					if ($_POST['numero'] == 0) {
 						echo 1;
 					} else {
 						$total = 1;
-						for ($i = $_POST['numero1']; $i > 0; $i--) {
+						for ($i = $_POST['numero']; $i > 0; $i--) {
 							$total *= $i;
 						}
 						echo $total;
