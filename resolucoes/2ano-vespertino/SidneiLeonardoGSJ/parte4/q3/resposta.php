@@ -15,10 +15,10 @@
 			<h2>Resposta</h2>
 			<?php
 
-				$pizza = $_POST["pizza"] ?? [];
+				$pizzas = $_POST["pizzas"] ?? [];
 
 				echo "<h3>O sabores escolhidos foram:</h3>";
-				foreach($pizza as $pizza){//verificando a seleção dossabores
+				foreach($pizzas as $pizza){//verificando a seleção dossabores
 					echo "<p>".$pizza."</p>";
 				}
 

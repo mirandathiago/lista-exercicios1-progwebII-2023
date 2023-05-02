@@ -26,9 +26,12 @@
 		</div>
 		<div class="box resposta">
 			<h2>Resposta</h2>
-			<?php $metodo = $_SERVER["REQUEST_METHOD"];
-				if($metodo == "POST"){$dobro = $num1 * 2;
-    $metade = $num1 / 2;?>
+			<?php 
+			$metodo = $_SERVER["REQUEST_METHOD"];
+				if($metodo == "POST"){
+					$dobro = $num1 * 2;
+					$metade = $num1 / 2;
+			?>
 			</h2<h2>Dobro: <?=$dobro?> e Metade: <?=$metade?></h2>
 			<?php }else{
 				print("Envie o formulário!");
