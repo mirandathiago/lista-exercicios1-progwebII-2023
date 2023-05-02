@@ -35,8 +35,7 @@ Saída: Média final: 7,45
     <div class="container">
         <div class="box Lista">
                        <h2>Preencha com as notas:</h2>
-        <form action="index
-        .php" method="post">
+        <form action="index.php" method="post">
                 <label>Nota 1:
                     <input type="number" id="number" name="n1" step="0.01" required value="<?=$nota1?>">
                 </label>
