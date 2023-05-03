@@ -13,8 +13,8 @@ Entrada: João
 Saída: Bom dia, João!
  */
 
-	$nome = $_POST["nome"] ?? "";
 	date_default_timezone_set('America/Sao_Paulo');
+	$nome = $_POST["nome"] ?? "";
 	$horario = date('H:i:s', time());
 ?>
 

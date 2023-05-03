@@ -26,6 +26,8 @@
 								$nome_sorteado = $nomes_array[$indice_sorteado];
 								echo "A pessoa sorteada foi: " . $nome_sorteado;
 							}
+						} else {
+							echo "Erro!";
 						}
 					?>
 			</p>

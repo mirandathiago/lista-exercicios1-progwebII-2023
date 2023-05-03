@@ -35,12 +35,12 @@ $linhas = $_POST["linhas"]?? "";
 
 				if ($metodo == "POST") {
 					
-					for ($i = 0; $i <= $linhas; $i++) { 
-					for ($j = 1; $j <= $i ; $j++) { 
+					for ($i = 1; $i <= $linhas; $i++) { 
+					   for ($j = 1; $j <= $i ; $j++) { 
 						echo "*";
-					};
+					   }
 					echo "<br>";
-				};
+				}
 				} else {
 					echo "<p>Aguardando</p>";
 				};

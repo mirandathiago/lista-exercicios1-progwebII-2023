@@ -1,6 +1,6 @@
 <?php
-    $n1 = $_POST["num1"] ?? 1;
-    $n2 = $_POST["num2"] ?? 1;
+    $n1 = $_POST["num1"];
+    $n2 = $_POST["num2"];
 
 ?>
 
@@ -10,7 +10,7 @@
 	<meta charset="UTF-8">
 	<title>Lista de Atividades</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../css_comum.css">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
 	<header>
@@ -19,7 +19,7 @@
 	<div class="container">
 		<div class="box formulario">
 			<h2></h2>
-			<form action="atividade3_3.php" method="post">
+			<form action="index.php" method="post">
 				<label>Inicio do Periodo:
                     <br>
 					<input type="number" name="num1" value="<?=$n1?>" required>

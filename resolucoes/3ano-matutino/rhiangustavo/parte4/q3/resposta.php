@@ -27,7 +27,7 @@
 		<div class="box resposta">
 			<h2>Resposta</h2>
                 <?php
-                    $sabores = $_POST["sabores"];
+                    $sabores = $_POST["sabores"] ?? [];
                     echo "<h2>Sabores selecionados:</h2>";
                     echo "<ul>";
                     foreach ($sabores as $sabor) {

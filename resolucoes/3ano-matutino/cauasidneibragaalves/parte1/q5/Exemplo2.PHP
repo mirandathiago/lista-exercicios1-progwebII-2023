@@ -19,8 +19,8 @@ Distancia: <input type="text" name= "x">
         
         <?php
         
-       $x= $_POST['x'];
-    $y = $_POST['y'];
+       $x= $_POST['x'] ?? 1;
+    $y = $_POST['y'] ?? 1;
 $vm= $x/$y;
 
 echo "Velocidade media: $vm";

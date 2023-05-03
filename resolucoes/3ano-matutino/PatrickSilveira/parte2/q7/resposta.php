@@ -1,3 +1,4 @@
+
 <?php
     /*
 	7-  A Taxa de Metabolismo Basal (TMB) é a quantidade mínima de energia que uma pessoa precisa para sobreviver,
