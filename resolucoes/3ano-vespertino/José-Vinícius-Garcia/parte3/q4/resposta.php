@@ -1,13 +1,18 @@
 <?php
 
-$num = $_POST ["num"];
-$var = 0;
-for ($i=1; $i <= $num ; $i++) { 
+$numero1 = $_GET["num1"];
+$numero2 = $_GET["num2"];
+$resultado = 0;
 
-	$var +=$i;
+for ($numero1; $numero1 <= $numero2 ; $numero1++) { 
+    
+    if ( $numero1 % 2 == 0) {
+        $resultado++;
+    }
 
 }
 
+echo "<h3>Quantidade de números pares: {$resultado}</h3>"
 
 ?>
 
@@ -20,17 +25,5 @@ for ($i=1; $i <= $num ; $i++) {
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
-	<header>
-		<h1>SOMA</h1>
-	</header>
-	<div class="container">
-		<div class="box resposta">
-			<h2>Resposta</h2>
-		
-			<p class="alerta-verde">A soma de 1 até <?=$num?> é igual a <?=$var?></p>
-			
-            <a href="index.php" class="link">Voltar</a>
-		</div>
-	</div>
 </body>
 </html>
