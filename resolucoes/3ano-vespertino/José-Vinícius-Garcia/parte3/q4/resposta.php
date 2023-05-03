@@ -1,28 +1,30 @@
 <?php
 
-$numero1 = $_GET["num1"];
-$numero2 = $_GET["num2"];
-$resultado = 0;
+$numero = $_POST["num"];
+$bol = $numero;
+$resultado = 1;
 
-for ($numero1; $numero1 <= $numero2 ; $numero1++) { 
-    
-    if ( $numero1 % 2 == 0) {
-        $resultado++;
-    }
+if ($numero != 0) {
+for ($i= 1; $i < $numero; $i++) { 
+
+$resultado+= $bol;
+$bol--;
 
 }
+}
 
-echo "<h3>Quantidade de números pares: {$resultado}</h3>"
+echo "<h3 id='mensagem'>Soma dos números de {$bol} a {$numero} = {$resultado} </h3>";
 
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-	<meta charset="UTF-8">
-	<title>Resposta</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="estilo.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <title>Questão 1</title>
 </head>
 <body>
 </body>
