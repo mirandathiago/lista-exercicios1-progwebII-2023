@@ -1,5 +1,6 @@
+<?php
 //Questão 5
-
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,8 +32,8 @@
             <h2>Resposta</h2>
             <br>
             <?php
-$distancia = $_GET["distancia"] ?? 0;
-$tempo= $_GET["tempo"] ?? 0;
+$distancia = $_GET["distancia"] ?? 40;
+$tempo= $_GET["tempo"] ?? 4;
 $velocidade = $distancia / $tempo;
 
 ?>

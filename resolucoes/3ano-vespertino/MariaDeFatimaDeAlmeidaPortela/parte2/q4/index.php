@@ -1,8 +1,8 @@
 <?php
-	$xA = $_POST["xA"] ?? " ";
-	$xB = $_POST["xB"] ?? " ";
-	$xC = $_POST["xC"] ?? " ";
-	$delta = pow($xB,2) - 4 * $xA * $xC;
+	$xA = $_POST["xA"] ?? 1;
+	$xB = $_POST["xB"] ?? 1;
+	$xC = $_POST["xC"] ?? 1;
+	$delta = $xB**2 - 4 * $xA * $xC;
 	$x1 = (-$xB + sqrt($delta))/(2 * $xA);
 	$x2 = (-$xB - sqrt($delta))/(2 * $xA);
 ?>

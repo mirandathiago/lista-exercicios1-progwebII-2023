@@ -30,16 +30,8 @@
 
 				</label>
 
-				<label>Insira o segundo número aqui:
-					<input type ="number" id="num2" name="num2" required> 
-
-				</label>
-
-
-			<h2>Dobro e metade de um número</h2>
-
-            <a href="" class="link">Voltar</a>
-
+		
+<button> "Enviar "</button>
 		</div>
 
 	</div>

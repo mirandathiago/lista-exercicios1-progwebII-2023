@@ -30,7 +30,7 @@ Saída: O tempo de duração do evento no formato horas:minutos:segundos. Exempl
 			$tempo -= 60;
 		}
 		$segundos = $tempo;
-		echo "<p>O tempo de duração do evento é: " . $hor . ":" . $min . ":" . $segundos . "</p>";
+		echo "<p>O tempo de duração do evento é: " . $hor . " :". $min . ":" . $segundos . "</p>";
 	}
 	?>
 </body>

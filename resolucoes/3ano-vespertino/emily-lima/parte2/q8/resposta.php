@@ -13,13 +13,13 @@ e obesidade grau 3 (IMC igual ou maior que 40) */
 
   if($IMC <= 18.5){
 	$mensagem = "<p>Você está abaixo do peso</p>";
-  }else if($IMC <= 18.5 && $IMC >= 24.9){
+  }else if($IMC >= 18.5 && $IMC <= 24.9){
 	$mensagem = "<p>Sua faixa de Peso está Normal</p>";
-  }else if($IMC <= 25 && $IMC >= 29.9){
+  }else if($IMC >= 25 && $IMC <= 29.9){
 	$mensagem = "<p>Sua faixa é de Sobrepeso</p>";
-  }else if($IMC <= 30 && $IMC >= 34.9){
+  }else if($IMC >= 30 && $IMC <= 34.9){
 	$mensagem = "<p>Sua faixa de peso é Obesidade grau1</p>";
-  }else if($IMC <= 35 && $IMC >= 39.9){
+  }else if($IMC >= 35 && $IMC <= 39.9){
 	$mensagem = "<p>Sua faixa de peso é Obesidade grau2</p>";
   }else{
 	$mensagem = "<p>Sua faixa de peso é Obesidade grau3</p>";

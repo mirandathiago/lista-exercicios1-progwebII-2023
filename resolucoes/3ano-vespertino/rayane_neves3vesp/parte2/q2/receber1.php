@@ -14,7 +14,7 @@ $kwh = $_POST["kwh"] ?? 0;
 		$valorpago = 0.50 * $kwh; //recebe o valor e multiplica pela taxa 
 	}else if($kwh>100 && $kwh< 200){   //analisar se o valor informado é maior qe 100 e menor que 200
 		$valorpago = 0.70 * $kwh; // 
-	}else if($kwh > 200){ //analisar se o valor informado é maior qe 200
+	}else if($kwh >= 200){ //analisar se o valor informado é maior qe 200
 		$valorpago = 0.87 * $kwh;
 	}	
 //VÊ SE O VALOR É MENOR QUE 20 REAIS;

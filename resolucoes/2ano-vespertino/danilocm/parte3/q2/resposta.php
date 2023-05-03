@@ -16,7 +16,7 @@
 			<?php
 
 				$valor1 = $_POST["valor1"] ?? 0;
-				$i = 1;
+				$i = 0;
 				echo "<br>";
 				echo "<h3>A tabuada de ".$valor1." é:</h3>";
 				echo "<br>";

@@ -23,7 +23,7 @@ $calculo = $preco * 0.9;
 	</header>
 	<div class="container">
 		<div class="box formulario">
-			<form action="q_stao1.php" method="post">
+			<form action="index.php" method="post">
 				
 				<label>Valor:
 					<input type="number" name="preco" value="<?=$preco?>" required>

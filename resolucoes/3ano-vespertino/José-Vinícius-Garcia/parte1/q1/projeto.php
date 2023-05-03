@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Questão 1</title>
-        <link rel="stylesheet" type="text/css" href="estilo1.css">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
     </head>
     <body>
         <h1>Desconto de 10%</h1>

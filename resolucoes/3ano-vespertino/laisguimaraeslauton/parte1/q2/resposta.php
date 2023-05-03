@@ -1,16 +1,4 @@
-<?php
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		
-	
-$numero = $_POST["numero"];
-		$dobro = $numero * 2;
-		$metade = $numero / 2;
-		echo "<h2>O dobro de $numero é: $dobro</h2>";
-		echo "<h2>A metade de $numero é: $metade</h2>";
-	}
-	
-	
-?>
+
 
 
 
@@ -37,7 +25,19 @@ $numero = $_POST["numero"];
 
 			<h2>Dobro e metade de um número</h2>
 
-            <a href="" class="link">Voltar</a>
+            <?php
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		
+	
+$numero = $_POST["num1"];
+		$dobro = $numero * 2;
+		$metade = $numero / 2;
+		echo "<h2>O dobro de $numero é: $dobro</h2>";
+		echo "<h2>A metade de $numero é: $metade</h2>";
+	}
+	
+	
+?>
 
 		</div>
 

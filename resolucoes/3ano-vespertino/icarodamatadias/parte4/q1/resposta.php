@@ -1,5 +1,5 @@
 <?php  
-    $frutas = $_GET["frutas"];
+    $frutas = $_GET["frutas"] ?? [];
 ?>
 
 <!DOCTYPE html>

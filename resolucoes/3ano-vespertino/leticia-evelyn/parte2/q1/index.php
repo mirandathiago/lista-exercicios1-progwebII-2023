@@ -44,9 +44,9 @@
 
             <?php
 
-            $num1 = $_GET["num1"];
-            $num2 = $_GET["num2"];
-            $num3 = $_GET["num3"];
+            $num1 = $_GET["num1"] ?? 0;
+            $num2 = $_GET["num2"] ?? 0;
+            $num3 = $_GET["num3"] ?? 0;
 
             if ($num1 > $num2 && $num2 > $num3) {
                 echo "<p>O maior número é: {$num1} e o menor: {$num3}</p>";

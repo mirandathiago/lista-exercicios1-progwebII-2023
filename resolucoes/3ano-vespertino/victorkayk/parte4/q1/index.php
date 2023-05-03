@@ -1,5 +1,7 @@
 <?php
-$frutas = $_POST['frutas'];
+if(isset($_POST['frutas']) ) {
+	$frutas = $_POST['frutas'] ;
+}
 ?>
 
 <!DOCTYPE html>
