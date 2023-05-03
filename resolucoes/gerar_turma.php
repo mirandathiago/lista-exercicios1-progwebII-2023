@@ -9,7 +9,7 @@ $turma = $turmas[$i];
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Alunos - <?=$turma?></title>
+	<title>Alunos</title>
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
