@@ -1,3 +1,10 @@
+<?php  
+    $valor = $_GET["valor"] ;
+	
+
+    
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,16 +15,21 @@
 </head>
 <body>
 	<header>
-		<h1>Formulário de Contato</h1>
+		
 	</header>
 	<div class="container">
 		<div class="box resposta">
-			<h2>Resposta</h2>
-			<p>A resposta será exibida aqui.</p>
-			<p class="alerta-vermelho">Mensagem de alerta aqui</p>
-			<p class="alerta-verde">Mensagem de alerta aqui</p>
-			<p class="alerta-amarelo">Mensagem de alerta aqui</p>
-            <a href="" class="link">Voltar</a>
+			<h2>Resultado</h2>
+            <?php 
+				$a = 0;
+                while ($a <= 10) {
+					$resultado = $valor * $a;
+					$a++;
+                	echo "<br> ".$valor." x ".$a. "=". $resultado. "<br>";
+					$resultado = 0;
+				}
+            ?>
+			<a href="taboada.php" class="link">Voltar</a>
 		</div>
 	</div>
 </body>
