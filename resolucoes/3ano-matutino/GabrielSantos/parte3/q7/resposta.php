@@ -25,7 +25,7 @@
 
     foreach ($cedulas as $cedula) {
         $qtdCedulas[$cedula] = floor($valor / $cedula);
-        $valor %= $cedula;
+        $valor %= $cedula; //$valor = $valor % $cedula
     }
 
 	/* 
